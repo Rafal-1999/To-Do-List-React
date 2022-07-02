@@ -1,25 +1,40 @@
-import logo from "./logo.svg";
-import "./App.css";
-
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
-    );
+	return (
+		// Homework from the module 6 and 7 Frontend Developer
+		<main>
+			<section className="list">
+				<h1 className="list__title">
+					Lista zadań
+				</h1>
+				<div className="list__block">
+					<div className="list__box">
+						<h2 className="list__header">
+							Dodaj nowe zadanie
+						</h2>
+					</div>
+					<div className="list__box list__box--no-line">
+						<form className="list__form js-form">
+							<input type="text" className="list__input js-newTask" placeholder="Co jest do zrobienia?" autofocus />
+							<button className="list__button">
+								Dodaj zadanie
+							</button>
+						</form>
+					</div>
+				</div>
+				<div className="list__block">
+					<div className="list__box list__box--flex">
+						<h2 className="list__header">
+							Lista zadań
+						</h2>
+						<div className="list__options js-optionsButtons"></div>
+					</div>
+					<div className="list__tasks-block">
+						<ul className="list__tasks js-tasks"></ul>
+					</div>
+				</div>
+			</section>
+		</main>
+	);
 }
 
 export default App;
