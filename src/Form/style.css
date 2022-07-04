@@ -1,0 +1,33 @@
+.list__form {
+    display: flex;
+}
+.list__input {
+    padding: 10px;
+    margin-right: 25px;
+    flex: 1;
+}
+.list__button {
+    background: rgb(0, 116, 131);
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(30, 111, 125);
+    padding: 10px;
+    transition: transform 0.5s linear;
+    cursor: pointer;
+}
+.list__button:hover {
+    background: rgb(0, 141, 156);
+    border-color: rgb(30, 136, 150);
+    transform: scale(1.1);
+}
+.list__button:active {
+    background: rgb(0, 167, 182);
+}
+
+@media (max-width: 576px) {
+    .list__form {
+        flex-direction: column;
+    }
+    .list__input {
+        margin: 0 0 15px;
+    }
+}
