@@ -1,3 +1,5 @@
+import Form from "./Form";
+
 function App() {
 	return (
 		// Homework from the module 6 and 7 Frontend Developer
@@ -13,12 +15,7 @@ function App() {
 						</h2>
 					</div>
 					<div className="list__box list__box--no-line">
-						<form className="list__form">
-							<input type="text" className="list__input" placeholder="Co jest do zrobienia?" autofocus />
-							<button className="list__button">
-								Dodaj zadanie
-							</button>
-						</form>
+						<Form />
 					</div>
 				</div>
 				<div className="list__block">
