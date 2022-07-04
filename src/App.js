@@ -13,8 +13,8 @@ function App() {
 						</h2>
 					</div>
 					<div className="list__box list__box--no-line">
-						<form className="list__form js-form">
-							<input type="text" className="list__input js-newTask" placeholder="Co jest do zrobienia?" autofocus />
+						<form className="list__form">
+							<input type="text" className="list__input" placeholder="Co jest do zrobienia?" autofocus />
 							<button className="list__button">
 								Dodaj zadanie
 							</button>
@@ -26,10 +26,10 @@ function App() {
 						<h2 className="list__header">
 							Lista zadań
 						</h2>
-						<div className="list__options js-optionsButtons"></div>
+						<div className="list__options"></div>
 					</div>
 					<div className="list__tasks-block">
-						<ul className="list__tasks js-tasks"></ul>
+						<ul className="list__tasks"></ul>
 					</div>
 				</div>
 			</section>
