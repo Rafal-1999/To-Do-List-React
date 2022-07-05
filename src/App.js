@@ -34,7 +34,7 @@ function App() {
                         <div className="list__options"></div>
                     </div>
                     <div className="list__tasks-block">
-                        <Tasks />
+                        <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
                     </div>
                 </div>
             </section>
