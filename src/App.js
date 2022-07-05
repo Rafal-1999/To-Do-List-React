@@ -1,8 +1,9 @@
 import Form from "./Form";
+import Tasks from "./Tasks";
 
 function App() {
     return (
-        // Homework from the module 6 and 7 Frontend Developer
+        // Homework from the module 8 Frontend Developer
         <main>
             <section className="list">
                 <h1 className="list__title">
@@ -26,7 +27,7 @@ function App() {
                         <div className="list__options"></div>
                     </div>
                     <div className="list__tasks-block">
-                        <ul className="list__tasks"></ul>
+                        <Tasks />
                     </div>
                 </div>
             </section>
