@@ -1,6 +1,13 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
 
+const tasks = [
+    { id: 1, content: "Zjeść obiad.", done: true },
+    { id: 2, content: "Nauczyć się Reacta.", done: false }
+];
+
+const hideDoneTasks = false;
+
 function App() {
     return (
         // Homework from the module 8 Frontend Developer
