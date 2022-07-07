@@ -1,4 +1,5 @@
 import Form from "./Form";
+import Buttons from "./Buttons";
 import Tasks from "./Tasks";
 
 const tasks = [
@@ -31,7 +32,7 @@ function App() {
                         <h2 className="list__header">
                             Lista zadań
                         </h2>
-                        <div className="list__options"></div>
+                        <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />
                     </div>
                     <div className="list__tasks-block">
                         <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />
