@@ -1,3 +1,5 @@
+import "./style.css";
+
 const Buttons = (props) => (
     props.tasks.length > 0 && (
         <div className="list__options">

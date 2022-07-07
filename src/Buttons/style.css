@@ -1,0 +1,32 @@
+.list__options {
+    display: flex;
+}
+.list__option-button {
+    border: none;
+    background: none;
+    color: rgb(0, 116, 131);
+    font-size: 18px;
+    padding: 0;
+    margin: 0 10px;
+    transition: color 0.3s linear;
+    cursor: pointer;
+}
+.list__option-button:hover,
+.list__option-button:focus {
+    color: rgb(0, 160, 200);
+}
+.list__option-button:disabled {
+    color: rgb(200, 200, 200);
+}
+
+@media (max-width: 768px) {
+    .list__options {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 20px 0;
+    }
+    .list__option-button {
+        margin: 0;
+    }
+}
