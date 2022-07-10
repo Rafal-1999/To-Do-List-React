@@ -1,3 +1,5 @@
+import "./style.css";
+
 const Header = (props) => (
     <header>
         <h1 className="list__title">
