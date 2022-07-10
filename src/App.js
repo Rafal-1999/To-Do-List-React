@@ -1,3 +1,4 @@
+import Header from "./Header";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
@@ -14,9 +15,7 @@ function App() {
         // Homework from the module 8 Frontend Developer
         <main>
             <section className="list">
-                <h1 className="list__title">
-                    Lista zadań
-                </h1>
+                <Header title="Lista zadań" />
                 <div className="list__block">
                     <div className="list__box">
                         <h2 className="list__header">
