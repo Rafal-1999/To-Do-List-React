@@ -19,11 +19,13 @@ function App() {
                 <Header title="Lista zadań" />
                 <Block
                     boxClass1="list__box"
-                    boxClass2="list__box list__box--flex"
+                    title="Dodaj nowe zadanie"
+                    boxClass2="list__box list__box--no-line"
                     extraContent2={<Form />}
                 />
                 <Block
                     boxClass1="list__box list__box--flex"
+                    title="Lista zadań"
                     extraContent1={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
                     boxClass2="list__tasks-block"
                     extraContent2={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}

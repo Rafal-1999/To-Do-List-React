@@ -4,7 +4,7 @@ const Block = (props) => (
     <div className="list__block">
         <div className={`${props.boxClass1}`}>
             <h2 className="list__header">
-                Dodaj nowe zadanie
+                {props.title}
             </h2>
             {props.extraContent1}
         </div>
