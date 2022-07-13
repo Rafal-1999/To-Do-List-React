@@ -1,3 +1,5 @@
+import "./style.css";
+
 const Block = (props) => (
     <div className="list__block">
         <div className={`${props.boxClass1}`}>

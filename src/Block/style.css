@@ -1,0 +1,35 @@
+.list__block {
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(227, 227, 227);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.list__box {
+    border-bottom: 2px solid rgb(227, 227, 227);
+    padding: 25px;
+}
+.list__header {
+    font-size: 25px;
+    margin: 0;
+}
+.list__box--no-line {
+    border: none;
+}
+.list__box--flex {
+    display: flex;
+    justify-content: space-between;
+}
+.list__tasks-block {
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .list__box--flex {
+        flex-direction: column;
+    }
+}
+@media (max-width: 576px) {
+    .list__header {
+        font-size: 20px;
+    }
+}
