@@ -1,3 +1,4 @@
+import Section from "./Section";
 import Header from "./Header";
 import Content from "./Content";
 import Form from "./Form";
@@ -15,7 +16,7 @@ function App() {
     return (
         // Homework from the module 8 Frontend Developer
         <main>
-            <section className="list">
+            <Section>
                 <Header title="Lista zadań" />
                 <Content
                     topBox="list__box"
@@ -30,7 +31,7 @@ function App() {
                     bottomBox="list__tasks-block"
                     extraContentBottom={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
                 />
-            </section>
+            </Section>
         </main>
     );
 }
