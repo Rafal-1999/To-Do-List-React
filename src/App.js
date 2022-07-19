@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Block from "./Block";
+import Content from "./Content";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
@@ -17,18 +17,18 @@ function App() {
         <main>
             <section className="list">
                 <Header title="Lista zadań" />
-                <Block
-                    boxClass1="list__box"
+                <Content
+                    topBox="list__box"
                     title="Dodaj nowe zadanie"
-                    boxClass2="list__box list__box--no-line"
-                    extraContent2={<Form />}
+                    bottomBox="list__box list__box--no-line"
+                    extraContentBottom={<Form />}
                 />
-                <Block
-                    boxClass1="list__box list__box--flex"
+                <Content
+                    topBox="list__box list__box--flex"
                     title="Lista zadań"
-                    extraContent1={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
-                    boxClass2="list__tasks-block"
-                    extraContent2={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+                    extraContentTop={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+                    bottomBox="list__tasks-block"
+                    extraContentBottom={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
                 />
             </section>
         </main>
