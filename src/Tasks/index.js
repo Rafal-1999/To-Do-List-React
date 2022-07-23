@@ -1,11 +1,11 @@
 import "./fontello/css/fontello.css";
 import "./style.css";
 
-const Tasks = (props) => (
+const Tasks = ({ tasks, hideDoneTasks }) => (
     <ul className="list__tasks">
-        {props.tasks.map(task => (
+        {tasks.map(task => (
             <li
-                className={`list__tasks-item${task.done && props.hideDoneTasks ? " list__tasks-item--done" : ""}`}
+                className={`list__tasks-item${task.done && hideDoneTasks ? " list__tasks-item--done" : ""}`}
                 key={task.id}
             >
                 <button className="list__action-button list__action-button--done">

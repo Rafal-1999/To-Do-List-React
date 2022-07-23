@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Header = (props) => (
+const Header = ({ title }) => (
     <header>
         <h1 className="list__title">
-            {props.title}
+            {title}
         </h1>
     </header>
 );

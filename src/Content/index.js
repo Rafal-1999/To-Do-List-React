@@ -1,15 +1,21 @@
 import "./style.css";
 
-const Content = (props) => (
+const Content = ({
+    topBox,
+    title,
+    extraContentTop,
+    bottomBox,
+    extraContentBottom
+}) => (
     <div className="list__block">
-        <div className={`${props.topBox}`}>
+        <div className={`${topBox}`}>
             <h2 className="list__header">
-                {props.title}
+                {title}
             </h2>
-            {props.extraContentTop}
+            {extraContentTop}
         </div>
-        <div className={`${props.bottomBox}`}>
-            {props.extraContentBottom}
+        <div className={`${bottomBox}`}>
+            {extraContentBottom}
         </div>
     </div>
 );
