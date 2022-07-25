@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Section from "./Section";
 import Header from "./Header";
 import Content from "./Content";
@@ -5,14 +6,24 @@ import Form from "./Form";
 import Buttons from "./Buttons";
 import Tasks from "./Tasks";
 
-const tasks = [
-    { id: 1, content: "Zjeść obiad.", done: true },
-    { id: 2, content: "Nauczyć się Reacta.", done: false }
-];
-
 const hideDoneTasks = false;
 
 function App() {
+    const [tasks, setTasks] = useState([
+        { id: 1, content: "Zjeść obiad.", done: true },
+        { id: 2, content: "Nauczyć się Reacta.", done: false }
+    ]);
+
+    const addNewTask = (taskContent) => {
+        setTasks(tasks => [
+            ...tasks, {
+                id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+                content: taskContent,
+                done: false
+            }
+        ])
+    };
+
     return (
         // Homework from the module 8 Frontend Developer
         <main>
@@ -22,7 +33,7 @@ function App() {
                     topBox="list__box"
                     title="Dodaj nowe zadanie"
                     bottomBox="list__box list__box--no-line"
-                    extraContentBottom={<Form />}
+                    extraContentBottom={<Form addNewTask={addNewTask} />}
                 />
                 <Content
                     topBox="list__box list__box--flex"
