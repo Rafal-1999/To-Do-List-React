@@ -24,6 +24,13 @@ function App() {
         ])
     };
 
+    const completeAllTasks = () => {
+        setTasks(tasks.map(task => ({
+            ...task,
+            done: true
+        })))
+    };
+
     return (
         // Homework from the module 8 Frontend Developer
         <main>
@@ -38,7 +45,7 @@ function App() {
                 <Content
                     topBox="list__box list__box--flex"
                     title="Lista zadań"
-                    extraContentTop={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+                    extraContentTop={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} completeAllTasks={completeAllTasks} />}
                     bottomBox="list__tasks-block"
                     extraContentBottom={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
                 />

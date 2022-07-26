@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Buttons = ({ tasks, hideDoneTasks }) => (
+const Buttons = ({ tasks, hideDoneTasks, completeAllTasks }) => (
     tasks.length > 0 && (
         <div className="list__options">
             <button className="list__option-button">
@@ -9,6 +9,7 @@ const Buttons = ({ tasks, hideDoneTasks }) => (
             <button
                 className="list__option-button"
                 disabled={tasks.every(({ done }) => done)}
+                onClick={completeAllTasks}
             >
                 Ukończ wszystkie
             </button>
