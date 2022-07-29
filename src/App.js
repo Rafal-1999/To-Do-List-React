@@ -31,6 +31,18 @@ function App() {
         })))
     };
 
+    const toggleDoneTask = (id) => {
+        setTasks(tasks => tasks.map(task => {
+            if (task.id === id) {
+                return {
+                    ...task,
+                    done: !task.done
+                };
+            }
+            return task;
+        }))
+    };
+
     const removeTask = (id) => {
         setTasks(tasks => tasks.filter(
             task => task.id !== id
@@ -53,7 +65,13 @@ function App() {
                     title="Lista zadań"
                     extraContentTop={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} completeAllTasks={completeAllTasks} />}
                     bottomBox="list__tasks-block"
-                    extraContentBottom={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} removeTask={removeTask} />}
+                    extraContentBottom={
+                        <Tasks
+                            tasks={tasks}
+                            hideDoneTasks={hideDoneTasks}
+                            toggleDoneTask={toggleDoneTask}
+                            removeTask={removeTask} />
+                    }
                 />
             </Section>
         </main>
