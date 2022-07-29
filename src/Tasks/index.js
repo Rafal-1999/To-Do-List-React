@@ -1,7 +1,7 @@
 import "./fontello/css/fontello.css";
 import "./style.css";
 
-const Tasks = ({ tasks, hideDoneTasks }) => (
+const Tasks = ({ tasks, hideDoneTasks, removeTask }) => (
     <ul className="list__tasks">
         {tasks.map(task => (
             <li
@@ -16,7 +16,9 @@ const Tasks = ({ tasks, hideDoneTasks }) => (
                         {task.content}
                     </span>
                 </p>
-                <button className="list__action-button list__action-button--remove">
+                <button
+                    className="list__action-button list__action-button--remove"
+                    onClick={() => removeTask(task.id)}>
                     <i className="icon-trash-empty list__icon"></i>
                 </button>
             </li>

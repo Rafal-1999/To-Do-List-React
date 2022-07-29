@@ -31,6 +31,12 @@ function App() {
         })))
     };
 
+    const removeTask = (id) => {
+        setTasks(tasks => tasks.filter(
+            task => task.id !== id
+        ))
+    };
+
     return (
         // Homework from the module 8 Frontend Developer
         <main>
@@ -47,7 +53,7 @@ function App() {
                     title="Lista zadań"
                     extraContentTop={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} completeAllTasks={completeAllTasks} />}
                     bottomBox="list__tasks-block"
-                    extraContentBottom={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+                    extraContentBottom={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} removeTask={removeTask} />}
                 />
             </Section>
         </main>
