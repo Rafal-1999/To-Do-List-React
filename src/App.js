@@ -29,7 +29,7 @@ function App() {
     };
 
     const completeAllTasks = () => {
-        setTasks(tasks.map(task => ({
+        setTasks(tasks => tasks.map(task => ({
             ...task,
             done: true
         })))
