@@ -24,6 +24,13 @@ function App() {
         ])
     };
 
+    const existTask = (taskContent) => {
+        if (tasks.some(
+            task => task === taskContent)) {
+            console.log("Zadanie jest już na liście.");
+        }
+    };
+
     const hideAllDoneTasks = () => {
         setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
     };
@@ -62,7 +69,7 @@ function App() {
                     topBox="list__box"
                     title="Dodaj nowe zadanie"
                     bottomBox="list__box list__box--no-line"
-                    extraContentBottom={<Form addNewTask={addNewTask} />}
+                    extraContentBottom={<Form addNewTask={addNewTask} existTask={existTask} />}
                 />
                 <Content
                     topBox="list__box list__box--flex"
