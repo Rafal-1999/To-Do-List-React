@@ -25,9 +25,9 @@ function App() {
     };
 
     const existTask = (taskContent) => {
-        if (tasks.some(
-            task => task === taskContent)) {
-            console.log("Zadanie jest już na liście.");
+        if (tasks.some(({ content }) => content === taskContent.trim())) {
+            alert("Podane zadanie jest już na liście.");
+            return true;
         }
     };
 

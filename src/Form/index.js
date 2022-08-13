@@ -6,8 +6,7 @@ const Form = ({ addNewTask, existTask }) => {
 
     const onFormSubmit = (e) => {
         e.preventDefault();
-        if (taskContent.trim().length !== 0) {
-            existTask(taskContent);
+        if ((taskContent.trim().length !== 0) && !(existTask(taskContent.trim()))) {
             addNewTask(taskContent.trim());
             setTaskContent("");
         }
