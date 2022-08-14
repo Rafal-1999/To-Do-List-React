@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Section from "./Section";
-import Header from "./Header";
-import Content from "./Content";
-import Form from "./Form";
-import Buttons from "./Buttons";
-import Tasks from "./Tasks";
+import Section from "./components/Section";
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Form from "./components/Form";
+import Buttons from "./components/Buttons";
+import Tasks from "./components/Tasks";
 
 function App() {
     const [tasks, setTasks] = useState([

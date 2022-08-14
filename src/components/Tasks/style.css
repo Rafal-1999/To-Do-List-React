@@ -53,14 +53,10 @@
     background-size: 0% 1px;
     background-position: left center;
     background-repeat: no-repeat;
-    animation-name: smooth-cross-out-undone;
-    animation-duration: 5s;
-    animation-timing-function: linear;
+    transition: background-size 5s linear;
 }
 .list__tasks-content--done {
     background-size: 100% 1px;
-    animation-name: smooth-cross-out-done;
-    animation-timing-function: linear;
 }
 .list__icon {
     font-size: 20px;
