@@ -24,8 +24,10 @@ function App() {
         ])
     };
 
+    const isTaskEmpty = (taskContent) => taskContent.length !== 0;
+
     const existTask = (taskContent) => {
-        if (tasks.some(({ content }) => content === taskContent.trim())) {
+        if (tasks.some(({ content }) => content === taskContent)) {
             alert("Podane zadanie jest już na liście.");
             return true;
         }
@@ -69,7 +71,13 @@ function App() {
                     topBox="list__box"
                     title="Dodaj nowe zadanie"
                     bottomBox="list__box list__box--no-line"
-                    extraContentBottom={<Form addNewTask={addNewTask} existTask={existTask} />}
+                    extraContentBottom={
+                        <Form
+                            addNewTask={addNewTask}
+                            isTaskEmpty={isTaskEmpty}
+                            existTask={existTask}
+                        />
+                    }
                 />
                 <Content
                     topBox="list__box list__box--flex"
