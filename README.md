@@ -1,3 +1,17 @@
+# To Do List React
+
+**Demo:**
+https://rafal-1999.github.io/To-Do-List-React/
+
+## How to use?
+
+1. Write a task to be performed.
+2. Click the turquoise button that says **Dodaj zadanie** with the mouse or the enter key.
+3. If you complete your task, you can mark it as finished by clicking the green square next to the task content.
+4. When the list is overwhelmingly long, you can delete unnecessary tasks by clicking the red button with a trash icon next to the task content.
+5. If you want to see only the tasks that have to be done, you can click the option button that says **Ukryj ukończone** which will hide the finished tasks. To show the tasks back, click the same button that says **Pokaż ukończone**.
+6. If you need to mark all tasks as completed, you can click the option button that says **Ukończ wszystkie**.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
