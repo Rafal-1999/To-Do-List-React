@@ -47,6 +47,7 @@ function App() {
     const toggleDoneTask = (id) => {
         setTasks(tasks => tasks.map(task => {
             if (task.id === id) {
+                smoothCrossOutTask(task);
                 return {
                     ...task,
                     done: !task.done
@@ -54,6 +55,12 @@ function App() {
             }
             return task;
         }))
+    };
+
+    const smoothCrossOutTask = (task) => {
+        const lengthTaskContent = task.content.length;
+        const result = ((lengthTaskContent / 10) * 0.1).toFixed(1);
+        return result;
     };
 
     const removeTask = (id) => {
