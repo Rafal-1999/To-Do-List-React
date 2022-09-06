@@ -9,10 +9,6 @@
     padding: 10px 15px;
     border-bottom: 2px solid rgb(227, 227, 227);
 }
-.list__tasks-item:hover,
-.list__tasks-item:focus-within {
-    background: gray;
-}
 .list__tasks-item:last-child {
     border: none;
 }
