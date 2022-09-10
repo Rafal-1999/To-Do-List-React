@@ -5,7 +5,8 @@ const Tasks = ({
     tasks,
     hideDoneTasks,
     toggleDoneTask,
-    removeTask
+    removeTask,
+    smoothCrossOutTask
 }) => (
     <ul className="list__tasks">
         {tasks.map(task => (
@@ -20,7 +21,10 @@ const Tasks = ({
                     {task.done && <i className="icon-check list__icon" />}
                 </button>
                 <p className="list__paragraph">
-                    <span className={`list__tasks-content${task.done ? " list__tasks-content--done" : ""}`}>
+                    <span
+                        className={`list__tasks-content${task.done ? " list__tasks-content--done" : ""}`}
+                        style={{ transitionDuration: `${smoothCrossOutTask(task)}` }}
+                    >
                         {task.content}
                     </span>
                 </p>
