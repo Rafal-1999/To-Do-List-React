@@ -23,7 +23,7 @@ const Tasks = ({
                 <p className="list__paragraph">
                     <span
                         className={`list__tasks-content${task.done ? " list__tasks-content--done" : ""}`}
-                        style={{ transitionDuration: `${smoothCrossOutTask(task)}` }}
+                        style={{ transitionDuration: smoothCrossOutTask(task) }}
                     >
                         {task.content}
                     </span>
