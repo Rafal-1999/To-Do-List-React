@@ -32,7 +32,7 @@ const Tasks = ({
                     className="list__action-button list__action-button--remove"
                     onClick={() => removeTask(task.id)}
                 >
-                    <i className="icon-trash-empty list__icon"></i>
+                    <i className="icon-trash-empty list__icon" />
                 </button>
             </li>
         ))}
