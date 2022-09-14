@@ -15,6 +15,7 @@ const Tasks = ({
                 key={task.id}
             >
                 <button
+                    type="button"
                     className="list__action-button list__action-button--done"
                     onClick={() => toggleDoneTask(task.id)}
                 >
@@ -29,6 +30,7 @@ const Tasks = ({
                     </span>
                 </p>
                 <button
+                    type="button"
                     className="list__action-button list__action-button--remove"
                     onClick={() => removeTask(task.id)}
                 >
