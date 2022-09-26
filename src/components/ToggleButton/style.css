@@ -1,0 +1,34 @@
+.list__toggle-button {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: rgb(234, 42, 60);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.3s linear;
+}
+.list__toggle-button::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    margin: auto 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    bottom: 0;
+    transition: all 0.3s linear;
+}
+.list__toggle-button-content {
+    display: none;
+}
+.list__toggle-button-content:checked + .list__toggle-button {
+    background: rgb(24, 122, 30);
+}
+.list__toggle-button-content:checked + .list__toggle-button::before {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}

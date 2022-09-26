@@ -2,6 +2,7 @@ import { useState } from "react";
 import Section from "./components/Section";
 import Header from "./components/Header";
 import Content from "./components/Content";
+import ToggleButton from "./components/ToggleButton";
 import Form from "./components/Form";
 import Buttons from "./components/Buttons";
 import Tasks from "./components/Tasks";
@@ -76,7 +77,8 @@ function App() {
                 <Content
                     topBox="list__box"
                     title="Dodaj nowe zadanie"
-                    bottomBox="list__box list__box--no-line"
+                    extraContentTop={<ToggleButton />}
+                    bottomBox="list__box list__box--layout"
                     extraContentBottom={
                         <Form
                             addNewTask={addNewTask}
@@ -86,7 +88,7 @@ function App() {
                     }
                 />
                 <Content
-                    topBox="list__box list__box--flex"
+                    topBox="list__box"
                     title="Lista zadań"
                     extraContentTop={
                         <Buttons
