@@ -28,10 +28,10 @@
 .list__toggle-button-content {
     display: none;
 }
-.list__toggle-button-content:checked+.list__toggle-button {
+.list__toggle-button-content:checked + .list__toggle-button {
     background: rgb(35, 165, 40);
 }
-.list__toggle-button-content:checked+.list__toggle-button::before {
+.list__toggle-button-content:checked + .list__toggle-button::before {
     left: calc(100% - 5px);
     transform: translateX(-100%);
 }
