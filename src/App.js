@@ -15,6 +15,12 @@ function App() {
 
     const [hideDoneTasks, setHideDoneTasks] = useState(false);
 
+    const toggleDarkMode = () => {
+        document.body.classList.toggle("dark");
+        const bodyElement = document.body;
+        return bodyElement.className == "" ? bodyElement.removeAttribute("class") : null;
+    };
+
     const addNewTask = (taskContent) => {
         setTasks(tasks => [
             ...tasks, {
@@ -77,7 +83,11 @@ function App() {
                 <Content
                     topBox="list__box"
                     title="Dodaj nowe zadanie"
-                    extraContentTop={<ToggleButton />}
+                    extraContentTop={
+                        <ToggleButton
+                            toggleDarkMode={toggleDarkMode}
+                        />
+                    }
                     bottomBox="list__box list__box--layout"
                     extraContentBottom={
                         <Form
