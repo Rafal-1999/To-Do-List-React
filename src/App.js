@@ -16,9 +16,9 @@ function App() {
     const [hideDoneTasks, setHideDoneTasks] = useState(false);
 
     const toggleDarkMode = () => {
-        document.body.classList.toggle("dark");
         const bodyElement = document.body;
-        return bodyElement.className == "" ? bodyElement.removeAttribute("class") : null;
+        bodyElement.classList.toggle("dark");
+        return bodyElement.className === "" ? bodyElement.removeAttribute("class") : null;
     };
 
     const addNewTask = (taskContent) => {
