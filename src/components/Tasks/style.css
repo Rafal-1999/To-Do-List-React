@@ -70,3 +70,43 @@
 .list__icon::before {
     margin: 0;
 }
+
+.dark .list__tasks-item {
+    border-bottom-color: rgb(28, 28, 28);
+}
+.dark .list__tasks-item:hover,
+.dark .list__tasks-item:focus-within {
+    background: rgb(28, 28, 28);
+}
+.dark .list__action-button--done {
+    background: rgb(33, 166, 42);
+}
+.dark .list__action-button--done:hover,
+.dark .list__action-button--done:focus {
+    background: rgb(40, 210, 52);
+}
+.dark .list__action-button--done:active {
+    background: rgb(70, 220, 80);
+}
+.dark .list__icon {
+    color: rgb(0, 0, 0);
+}
+.dark .list__tasks-content {
+    background: linear-gradient(0deg, #FFF, #FFF);
+    background-size: 0% 1px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.dark .list__tasks-content--done {
+    background-size: 100% 1px;
+}
+.dark .list__action-button--remove {
+    background: rgb(236, 65, 82);
+}
+.dark .list__action-button--remove:hover,
+.dark .list__action-button--remove:focus {
+    background: rgb(240, 95, 110);
+}
+.dark .list__action-button--remove:active {
+    background: rgb(240, 135, 145);
+}

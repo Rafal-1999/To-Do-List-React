@@ -32,3 +32,11 @@
         font-size: 20px;
     }
 }
+
+.dark .list__block {
+    background: rgb(0, 0, 0);
+    border-color: rgb(28, 28, 28);
+}
+.dark .list__box {
+    border-bottom-color: rgb(28, 28, 28);
+}

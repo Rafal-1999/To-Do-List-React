@@ -31,3 +31,19 @@
         margin: 0 0 15px;
     }
 }
+
+.dark .list__input {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    border-color: rgb(255, 255, 255);
+}
+.dark .list__button {
+    color: rgb(0, 0, 0);
+    background: rgb(0, 149, 186);
+    border: 3px solid rgb(30, 111, 125);
+}
+.dark .list__button:hover,
+.dark .list__button:focus {
+    background: rgb(46, 213, 255);
+    border-color: rgb(35, 127, 144);
+}

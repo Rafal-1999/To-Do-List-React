@@ -30,3 +30,14 @@
         margin: 0;
     }
 }
+
+.dark .list__option-button {
+    color: rgb(0, 149, 186);
+}
+.dark .list__option-button:hover,
+.dark .list__option-button:focus {
+    color: rgb(46, 213, 255);
+}
+.dark .list__option-button:disabled {
+    color: rgb(200, 200, 200);
+}
