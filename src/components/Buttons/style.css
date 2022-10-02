@@ -2,12 +2,12 @@
     display: flex;
 }
 .list__option-button {
-    border: none;
-    background: none;
     color: rgb(0, 116, 131);
-    font-size: 18px;
-    padding: 0;
+    background: none;
     margin: 0 10px;
+    padding: 0;
+    border: none;
+    font-size: 18px;
     transition: color 0.3s linear;
     cursor: pointer;
 }
