@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 768px) {
-    .list__box--flex {
+    .list__box--vertical {
         flex-direction: column;
     }
 }
