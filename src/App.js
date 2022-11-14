@@ -98,7 +98,7 @@ function App() {
                     }
                 />
                 <Content
-                    topBox="list__box"
+                    topBox="list__box list__box--vertical"
                     title="Lista zadań"
                     extraContentTop={
                         <Buttons
