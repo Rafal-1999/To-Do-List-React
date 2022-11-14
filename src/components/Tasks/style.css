@@ -72,6 +72,10 @@
 .list__action-button--remove:active {
     background: rgb(255, 85, 91);
 }
+.list__tooltip {
+    margin-top: -15px !important;
+    padding: 10px 20px !important;
+}
 
 .dark .list__tasks-item {
     border-bottom-color: rgb(28, 28, 28);
@@ -111,4 +115,12 @@
 }
 .dark .list__action-button--remove:active {
     background: rgb(240, 135, 145);
+}
+.dark .list__tooltip {
+    padding: 10px 20px !important;
+    color: rgb(0, 0, 0) !important;
+    background: rgb(238, 238, 238) !important;
+}
+.dark .list__tooltip::after {
+    background-color: #FFF !important;
 }
