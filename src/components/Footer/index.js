@@ -1,3 +1,5 @@
+import "./style.css";
+
 const Footer = ({
     creator,
     designer,
