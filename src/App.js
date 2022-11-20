@@ -6,6 +6,7 @@ import ToggleButton from "./components/ToggleButton";
 import Form from "./components/Form";
 import Buttons from "./components/Buttons";
 import Tasks from "./components/Tasks";
+import Footer from "./components/Footer";
 
 function App() {
     const [tasks, setTasks] = useState([
@@ -77,50 +78,61 @@ function App() {
 
     return (
         // Homework from the module 8 Frontend Developer
-        <main>
-            <Section>
-                <Header title="Lista zadań" />
-                <Content
-                    topBox="list__box"
-                    title="Dodaj nowe zadanie"
-                    extraContentTop={
-                        <ToggleButton
-                            toggleDarkMode={toggleDarkMode}
-                        />
-                    }
-                    bottomBox="list__box list__box--layout"
-                    extraContentBottom={
-                        <Form
-                            addNewTask={addNewTask}
-                            isTaskEmpty={isTaskEmpty}
-                            existTask={existTask}
-                        />
-                    }
-                />
-                <Content
-                    topBox="list__box list__box--vertical"
-                    title="Lista zadań"
-                    extraContentTop={
-                        <Buttons
-                            tasks={tasks}
-                            hideDoneTasks={hideDoneTasks}
-                            hideAllDoneTasks={hideAllDoneTasks}
-                            completeAllTasks={completeAllTasks}
-                        />
-                    }
-                    bottomBox="list__tasks-block"
-                    extraContentBottom={
-                        <Tasks
-                            tasks={tasks}
-                            hideDoneTasks={hideDoneTasks}
-                            toggleDoneTask={toggleDoneTask}
-                            removeTask={removeTask}
-                            smoothCrossOutTask={smoothCrossOutTask}
-                        />
-                    }
-                />
-            </Section>
-        </main>
+        <>
+            <main>
+                <Section>
+                    <Header title="Lista zadań" />
+                    <Content
+                        topBox="list__box"
+                        title="Dodaj nowe zadanie"
+                        extraContentTop={
+                            <ToggleButton
+                                toggleDarkMode={toggleDarkMode}
+                            />
+                        }
+                        bottomBox="list__box list__box--layout"
+                        extraContentBottom={
+                            <Form
+                                addNewTask={addNewTask}
+                                isTaskEmpty={isTaskEmpty}
+                                existTask={existTask}
+                            />
+                        }
+                    />
+                    <Content
+                        topBox="list__box list__box--vertical"
+                        title="Lista zadań"
+                        extraContentTop={
+                            <Buttons
+                                tasks={tasks}
+                                hideDoneTasks={hideDoneTasks}
+                                hideAllDoneTasks={hideAllDoneTasks}
+                                completeAllTasks={completeAllTasks}
+                            />
+                        }
+                        bottomBox="list__tasks-block"
+                        extraContentBottom={
+                            <Tasks
+                                tasks={tasks}
+                                hideDoneTasks={hideDoneTasks}
+                                toggleDoneTask={toggleDoneTask}
+                                removeTask={removeTask}
+                                smoothCrossOutTask={smoothCrossOutTask}
+                            />
+                        }
+                    />
+                </Section>
+            </main>
+            <Footer
+                creator="Rafał Chudy"
+                designer="YouCode"
+                copyright="wszelkie prawa zastrzeżone"
+                year="2022"
+                socialLink="https://github.com/Rafal-1999"
+                socialName="GitHub"
+                email="rafalchu5@gmail.com"
+            />
+        </>
     );
 }
 
