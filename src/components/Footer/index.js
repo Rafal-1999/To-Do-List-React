@@ -43,7 +43,7 @@ const Footer = ({
                     title={socialName}
                 >
                     {socialName}
-                    <i className={`footer__icon ${socialIcon}`}></i>
+                    <i className={`${socialIcon} footer__icon`}></i>
                 </a>
             )}
             {email && (

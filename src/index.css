@@ -1,6 +1,9 @@
 *, ::before, ::after {
     box-sizing: border-box;
 }
+i[class*="icon-"]::before {
+    margin: 0;
+}
 html {
     box-sizing: inherit;
 }

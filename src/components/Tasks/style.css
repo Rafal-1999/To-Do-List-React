@@ -23,9 +23,6 @@
     font-size: 20px;
     color: rgb(255, 255, 255);
 }
-.list__icon::before {
-    margin: 0;
-}
 .list__action-button {
     width: 40px;
     height: 40px;
