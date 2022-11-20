@@ -1,5 +1,4 @@
 import ReactTooltip from "react-tooltip";
-import "./fontello/css/fontello.css";
 import "./style.css";
 
 const Tasks = ({

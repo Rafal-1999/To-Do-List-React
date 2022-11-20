@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./fontello/css/fontello.css";
 import Section from "./components/Section";
 import Header from "./components/Header";
 import Content from "./components/Content";
@@ -130,6 +131,7 @@ function App() {
                 year="2022"
                 socialLink="https://github.com/Rafal-1999"
                 socialName="GitHub"
+                socialIcon="icon-github"
                 email="rafalchu5@gmail.com"
             />
         </>
