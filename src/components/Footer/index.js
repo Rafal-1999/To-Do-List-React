@@ -26,7 +26,7 @@ const Footer = ({
                     </span>
                 </p>
             )}
-            {copyright && year && (
+            {(copyright && year) && (
                 <p className="footer__content">
                     {copyright} <span className="footer__highlighted">
                         &copy;{year}
@@ -35,7 +35,7 @@ const Footer = ({
             )}
         </div>
         <div className="footer__right-side">
-            {socialLink && socialName && socialIcon && (
+            {(socialLink && socialName && socialIcon) && (
                 <a
                     href={socialLink}
                     className="footer__link"

@@ -17,14 +17,14 @@ const Tasks = ({
                 <button
                     type="button"
                     className="list__action-button list__action-button--done"
-                    data-for="action-button1"
+                    data-for="toggleTaskDoneTooltip"
                     data-tip={`${task.done ? "Wznów" : "Ukończ"} zadanie`}
                     onClick={() => toggleDoneTask(task.id)}
                 >
                     {task.done && <i className="icon-check list__icon" />}
                 </button>
                 <ReactTooltip
-                    id="action-button1"
+                    id="toggleTaskDoneTooltip"
                     className="list__tooltip"
                     textColor="rgb(255, 255, 255)"
                     backgroundColor="rgb(28, 28, 28)"
@@ -45,14 +45,14 @@ const Tasks = ({
                 <button
                     type="button"
                     className="list__action-button list__action-button--remove"
-                    data-for="action-button2"
+                    data-for="removeTaskTooltip"
                     data-tip="Usuń zadanie"
                     onClick={() => removeTask(task.id)}
                 >
                     <i className="icon-trash-empty list__icon" />
                 </button>
                 <ReactTooltip
-                    id="action-button2"
+                    id="removeTaskTooltip"
                     className="list__tooltip"
                     textColor="rgb(255, 255, 255)"
                     backgroundColor="rgb(28, 28, 28)"

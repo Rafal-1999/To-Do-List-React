@@ -1,20 +1,20 @@
 import "./style.css";
 
 const Content = ({
-    topBox,
+    classNameTopBox,
     title,
     extraContentTop,
-    bottomBox,
+    classNameBottomBox,
     extraContentBottom
 }) => (
     <div className="list__block">
-        <div className={`${topBox}`}>
+        <div className={classNameTopBox}>
             <h2 className="list__header">
                 {title}
             </h2>
             {extraContentTop}
         </div>
-        <div className={`${bottomBox}`}>
+        <div className={classNameBottomBox}>
             {extraContentBottom}
         </div>
     </div>

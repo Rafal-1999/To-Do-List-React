@@ -33,8 +33,6 @@ function App() {
         ])
     };
 
-    const isTaskEmpty = (taskContent) => taskContent.length !== 0;
-
     const existTask = (taskContent) => {
         if (tasks.some(({ content }) => content === taskContent)) {
             alert("Podane zadanie jest już na liście.");
@@ -84,24 +82,23 @@ function App() {
                 <Section>
                     <Header title="Lista zadań" />
                     <Content
-                        topBox="list__box"
+                        classNameTopBox="list__box"
                         title="Dodaj nowe zadanie"
                         extraContentTop={
                             <ToggleButton
                                 toggleDarkMode={toggleDarkMode}
                             />
                         }
-                        bottomBox="list__box list__box--layout"
+                        classNameBottomBox="list__box list__box--layout"
                         extraContentBottom={
                             <Form
                                 addNewTask={addNewTask}
-                                isTaskEmpty={isTaskEmpty}
                                 existTask={existTask}
                             />
                         }
                     />
                     <Content
-                        topBox="list__box list__box--vertical"
+                        classNameTopBox="list__box list__box--vertical"
                         title="Lista zadań"
                         extraContentTop={
                             <Buttons
@@ -111,7 +108,7 @@ function App() {
                                 completeAllTasks={completeAllTasks}
                             />
                         }
-                        bottomBox="list__tasks-block"
+                        classNameBottomBox="list__tasks-block"
                         extraContentBottom={
                             <Tasks
                                 tasks={tasks}
