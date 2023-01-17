@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./fontello/css/fontello.css";
 import Section from "./components/Section";
 import Header from "./components/Header";
@@ -17,6 +17,12 @@ function App() {
 
     const [hideDoneTasks, setHideDoneTasks] = useState(false);
 
+    useEffect(() => {
+        if (localStorage.getItem("tasks")) {
+            setTasks(JSON.parse(localStorage.getItem("tasks")));
+        }
+    }, []);
+
     const toggleDarkMode = () => {
         const bodyElement = document.body;
         bodyElement.classList.toggle("dark");
@@ -31,6 +37,14 @@ function App() {
                 done: false
             }
         ])
+
+        localStorage.setItem("tasks", JSON.stringify([
+            ...tasks, {
+                id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+                content: taskContent,
+                done: false
+            }
+        ]));
     };
 
     const existTask = (taskContent) => {
@@ -49,6 +63,13 @@ function App() {
             ...task,
             done: true
         })))
+
+        localStorage.setItem("tasks", JSON.stringify(
+            tasks.map(task => ({
+                ...task,
+                done: true
+            }))
+        ));
     };
 
     const toggleDoneTask = (id) => {
@@ -61,6 +82,18 @@ function App() {
             }
             return task;
         }))
+
+        localStorage.setItem("tasks", JSON.stringify(
+            tasks.map(task => {
+                if (task.id === id) {
+                    return {
+                        ...task,
+                        done: !task.done
+                    };
+                }
+                return task;
+            })
+        ));
     };
 
     const smoothCrossOutTask = (task) => {
@@ -73,6 +106,12 @@ function App() {
         setTasks(tasks => tasks.filter(
             task => task.id !== id
         ))
+
+        localStorage.setItem("tasks", JSON.stringify(
+            tasks.filter(
+                task => task.id !== id
+            )
+        ));
     };
 
     return (
