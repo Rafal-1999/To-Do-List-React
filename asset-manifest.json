@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/To-Do-List-React/static/css/main.c971ab9d.css",
-    "main.js": "/To-Do-List-React/static/js/main.2b8884ce.js",
+    "main.js": "/To-Do-List-React/static/js/main.2e2f6e37.js",
     "static/js/787.d1b892bc.chunk.js": "/To-Do-List-React/static/js/787.d1b892bc.chunk.js",
     "static/media/fontello.eot?29136888": "/To-Do-List-React/static/media/fontello.a40f5dabf78370268dd0.eot",
     "static/media/fontello.ttf?29136888": "/To-Do-List-React/static/media/fontello.374c0d88585671093769.ttf",
@@ -10,11 +10,11 @@
     "static/media/fontello.svg?29136888": "/To-Do-List-React/static/media/fontello.e6c3e0c27afee3039f7a.svg",
     "index.html": "/To-Do-List-React/index.html",
     "main.c971ab9d.css.map": "/To-Do-List-React/static/css/main.c971ab9d.css.map",
-    "main.2b8884ce.js.map": "/To-Do-List-React/static/js/main.2b8884ce.js.map",
+    "main.2e2f6e37.js.map": "/To-Do-List-React/static/js/main.2e2f6e37.js.map",
     "787.d1b892bc.chunk.js.map": "/To-Do-List-React/static/js/787.d1b892bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c971ab9d.css",
-    "static/js/main.2b8884ce.js"
+    "static/js/main.2e2f6e37.js"
   ]
 }
