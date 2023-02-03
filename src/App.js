@@ -10,6 +10,10 @@ import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
 
 function App() {
+    const [darkMode, setDarkMode] = useState(
+        JSON.parse(localStorage.getItem("darkMode") || false)
+    );
+
     const [tasks, setTasks] = useState(
         JSON.parse(localStorage.getItem("tasks") || [])
     );
@@ -20,10 +24,24 @@ function App() {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }, [tasks]);
 
+    useEffect(() => {
+        localStorage.setItem("darkMode", JSON.stringify(darkMode));
+
+        changeDarkMode(darkMode);
+    }, [darkMode]);
+
     const toggleDarkMode = () => {
+        setDarkMode(darkMode => !darkMode);
+    };
+
+    const changeDarkMode = (isDarkMode) => {
         const bodyElement = document.body;
-        bodyElement.classList.toggle("dark");
-        return bodyElement.className === "" ? bodyElement.removeAttribute("class") : null;
+
+        if (isDarkMode) {
+            bodyElement.classList.add("dark");
+        } else {
+            bodyElement.removeAttribute("class");
+        }
     };
 
     const addNewTask = (taskContent) => {
