@@ -107,6 +107,7 @@ function App() {
                         title="Dodaj nowe zadanie"
                         extraContentTop={
                             <ToggleButton
+                                darkMode={darkMode}
                                 toggleDarkMode={toggleDarkMode}
                             />
                         }
