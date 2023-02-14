@@ -1,9 +1,0 @@
-.list__title {
-    font-size: 40px;
-}
-
-@media (max-width: 576px) {
-    .list__title {
-        font-size: 30px;
-    }
-}

@@ -1,10 +1,10 @@
-import "./style.css";
+import { HeaderOne } from "./styled";
 
 const Header = ({ title }) => (
     <header>
-        <h1 className="list__title">
+        <HeaderOne>
             {title}
-        </h1>
+        </HeaderOne>
     </header>
 );
 
