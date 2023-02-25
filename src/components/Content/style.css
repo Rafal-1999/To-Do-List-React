@@ -4,7 +4,7 @@
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.list__box {
+.list__box { /* Tą klasę zawierają oba classNameTopBox oraz classNameBottomBox w pierwszym Content */
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid rgb(227, 227, 227);
@@ -14,16 +14,16 @@
     font-size: 25px;
     margin: 0;
 }
-.list__box--layout {
+.list__box--layout { /* Ta klasa jest używana tylko w pierwszym Content dla classNameBottomBox */
     display: block;
     border: 0;
 }
-.list__tasks-block {
+.list__tasks-block { /* Ta klasa jest używana tylko w drugim Content dla classNameBottomBox */
     padding: 25px;
 }
 
 @media (max-width: 768px) {
-    .list__box--vertical {
+    .list__box--vertical { /* Ta klasa jest używana tylko w drugim Content dla classNameTopBox */
         flex-direction: column;
     }
 }
