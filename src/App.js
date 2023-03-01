@@ -8,6 +8,7 @@ import Form from "./components/Form";
 import Buttons from "./components/Buttons";
 import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
+import { GlobalStyles } from "./globalStyles";
 
 function App() {
     const [darkMode, setDarkMode] = useState(
@@ -99,6 +100,7 @@ function App() {
     return (
         // Homework from the module 8 Frontend Developer
         <>
+            <GlobalStyles />
             <main>
                 <Section>
                     <Header title="Lista zadań" />
