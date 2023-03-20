@@ -1,18 +1,20 @@
 import { Block, TopBox, HeaderTwo, BottomBox } from "./styled";
 
 const Content = ({
+    isVertical,
     title,
     extraContentTop,
+    isLayout,
     extraContentBottom
 }) => (
     <Block>
-        <TopBox vertical>
+        <TopBox isVertical={isVertical ? vertical : false}>
             <HeaderTwo>
                 {title}
             </HeaderTwo>
             {extraContentTop}
         </TopBox>
-        <BottomBox>
+        <BottomBox isLayout={isLayout ? layout : false}>
             {extraContentBottom}
         </BottomBox>
     </Block>
