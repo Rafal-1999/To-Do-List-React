@@ -111,7 +111,7 @@ function App() {
                                 toggleDarkMode={toggleDarkMode}
                             />
                         }
-                        isLayout={isLayout}
+                        isLayout
                         classNameBottomBox="list__box list__box--layout"
                         extraContentBottom={
                             <Form
@@ -121,7 +121,7 @@ function App() {
                         }
                     />
                     <Content
-                        isVertical={isVertical}
+                        isVertical
                         classNameTopBox="list__box list__box--vertical"
                         title="Lista zadań"
                         extraContentTop={
