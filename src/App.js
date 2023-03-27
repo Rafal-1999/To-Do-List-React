@@ -132,6 +132,7 @@ function App() {
                                 completeAllTasks={completeAllTasks}
                             />
                         }
+                        isBlock
                         classNameBottomBox="list__tasks-block"
                         extraContentBottom={
                             <Tasks

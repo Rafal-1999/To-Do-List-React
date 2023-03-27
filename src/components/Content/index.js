@@ -5,32 +5,20 @@ const Content = ({
     title,
     extraContentTop,
     isLayout,
+    isBlock,
     extraContentBottom
 }) => (
     <Block>
-        <TopBox isVertical={isVertical ? vertical : false}>
+        <TopBox vertical={isVertical}>
             <HeaderTwo>
                 {title}
             </HeaderTwo>
             {extraContentTop}
         </TopBox>
-        <BottomBox isLayout={isLayout ? layout : false}>
+        <BottomBox layout={isLayout} block={isBlock}>
             {extraContentBottom}
         </BottomBox>
     </Block>
-
-    // Kod sprzed zmiany na styled-components.
-    // <div className="list__block">
-    //     <div className={classNameTopBox}>
-    //         <h2 className="list__header">
-    //             {title}
-    //         </h2>
-    //         {extraContentTop}
-    //     </div>
-    //     <div className={classNameBottomBox}>
-    //         {extraContentBottom}
-    //     </div>
-    // </div>
 );
 
 export default Content;

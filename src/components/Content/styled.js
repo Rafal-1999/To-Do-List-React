@@ -39,4 +39,9 @@ export const BottomBox = styled.div`
         display: block;
         border: 0;
     `}
+
+    ${({ block }) => block && css`
+        display: block;
+        padding: 25px;
+    `}
 `;
