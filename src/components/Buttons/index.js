@@ -1,4 +1,4 @@
-import "./style.css";
+import { Box, Button } from "./styled";
 
 const Buttons = ({
     tasks,
@@ -7,18 +7,17 @@ const Buttons = ({
     completeAllTasks
 }) => (
     tasks.length > 0 && (
-        <div className="list__options">
-            <button className="list__option-button" onClick={hideAllDoneTasks}>
+        <Box>
+            <Button onClick={hideAllDoneTasks}>
                 {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
-            </button>
-            <button
-                className="list__option-button"
+            </Button>
+            <Button
                 disabled={tasks.every(({ done }) => done)}
                 onClick={completeAllTasks}
             >
                 Ukończ wszystkie
-            </button>
-        </div>
+            </Button>
+        </Box>
     )
 );
 
