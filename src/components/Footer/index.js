@@ -1,4 +1,11 @@
-import "./style.css";
+import {
+    FooterArea,
+    FooterBox,
+    FooterContent,
+    Awarded,
+    FooterLink,
+    FooterIcon
+} from "./styled";
 
 const Footer = ({
     creator,
@@ -10,53 +17,52 @@ const Footer = ({
     socialIcon,
     email
 }) => (
-    <footer className="footer">
-        <div className="footer__left-side">
+    <FooterArea>
+        <FooterBox>
             {creator && (
-                <p className="footer__content">
-                    wykonawca: <span className="footer__highlighted">
+                <FooterContent>
+                    wykonawca: <Awarded>
                         {creator}
-                    </span>
-                </p>
+                    </Awarded>
+                </FooterContent>
             )}
             {designer && (
-                <p className="footer__content">
-                    projektant: <span className="footer__highlighted">
+                <FooterContent>
+                    projektant: <Awarded>
                         {designer}
-                    </span>
-                </p>
+                    </Awarded>
+                </FooterContent>
             )}
             {(copyright && year) && (
-                <p className="footer__content">
-                    {copyright} <span className="footer__highlighted">
+                <FooterContent>
+                    {copyright} <Awarded>
                         &copy;{year}
-                    </span>
-                </p>
+                    </Awarded>
+                </FooterContent>
             )}
-        </div>
-        <div className="footer__right-side">
+        </FooterBox>
+        <FooterBox alignment>
             {(socialLink && socialName && socialIcon) && (
-                <a
+                <FooterLink
                     href={socialLink}
-                    className="footer__link"
                     target="_blank"
                     title={socialName}
+                    rel="noreferrer"
                 >
                     {socialName}
-                    <i className={`${socialIcon} footer__icon`}></i>
-                </a>
+                    <FooterIcon className={socialIcon}></FooterIcon>
+                </FooterLink>
             )}
             {email && (
-                <a
+                <FooterLink
                     href={`mailto:${email}`}
-                    className="footer__link"
                     title={`Napisz do: ${email}`}
                 >
                     {email}
-                </a>
+                </FooterLink>
             )}
-        </div>
-    </footer>
+        </FooterBox>
+    </FooterArea>
 );
 
 export default Footer;
