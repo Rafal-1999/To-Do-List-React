@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useFocusElement } from "../../hooks/useFocusElement";
-import "./style.css";
+import { FormArea, FormInput, FormButton } from "./styled";
 
 const Form = ({ addNewTask, existTask }) => {
     const [taskContent, setTaskContent] = useState("");
@@ -20,20 +20,19 @@ const Form = ({ addNewTask, existTask }) => {
     const isTaskEmpty = (taskContent) => taskContent.length !== 0;
 
     return (
-        <form className="list__form" onSubmit={onFormSubmit}>
-            <input
+        <FormArea onSubmit={onFormSubmit}>
+            <FormInput
                 type="text"
-                className="list__input"
                 placeholder="Co jest do zrobienia?"
                 autoFocus
                 value={taskContent}
                 onChange={({ target }) => setTaskContent(target.value)}
                 ref={inputFocus}
             />
-            <button className="list__button" onClick={inputFocusEvent}>
+            <FormButton onClick={inputFocusEvent}>
                 Dodaj zadanie
-            </button>
-        </form>
+            </FormButton>
+        </FormArea>
     )
 };
 
