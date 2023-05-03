@@ -1,5 +1,12 @@
-import ReactTooltip from "react-tooltip";
-import "./style.css";
+import {
+    TasksArea,
+    TasksItem,
+    ButtonIcon,
+    ActionButton,
+    TasksParagraph,
+    TasksContent,
+    ReactTooltipStyled
+} from "./styled";
 
 const Tasks = ({
     tasks,
@@ -8,24 +15,23 @@ const Tasks = ({
     removeTask,
     smoothCrossOutTask
 }) => (
-    <ul className="list__tasks">
+    <TasksArea>
         {tasks.map(task => (
-            <li
-                className={`list__tasks-item${task.done && hideDoneTasks ? " list__tasks-item--done" : ""}`}
+            <TasksItem
+                className={`${task.done && hideDoneTasks ? " list__tasks-item--done" : ""}`}
                 key={task.id}
             >
-                <button
+                <ActionButton
+                    done
                     type="button"
-                    className="list__action-button list__action-button--done"
                     data-for="toggleTaskDoneTooltip"
                     data-tip={`${task.done ? "Wznów" : "Ukończ"} zadanie`}
                     onClick={() => toggleDoneTask(task.id)}
                 >
-                    {task.done && <i className="icon-check list__icon" />}
-                </button>
-                <ReactTooltip
+                    {task.done && <ButtonIcon className="icon-check" />}
+                </ActionButton>
+                <ReactTooltipStyled
                     id="toggleTaskDoneTooltip"
-                    className="list__tooltip"
                     textColor="rgb(255, 255, 255)"
                     backgroundColor="rgb(28, 28, 28)"
                     arrowColor="rgb(28, 28, 28)"
@@ -34,26 +40,25 @@ const Tasks = ({
                     delayShow={200}
                     delayHide={200}
                 />
-                <p className="list__paragraph">
-                    <span
-                        className={`list__tasks-content${task.done ? " list__tasks-content--done" : ""}`}
+                <TasksParagraph>
+                    <TasksContent
+                        // className={`${task.done ? done : ""}`}
                         style={{ transitionDuration: smoothCrossOutTask(task) }}
                     >
                         {task.content}
-                    </span>
-                </p>
-                <button
+                    </TasksContent>
+                </TasksParagraph>
+                <ActionButton
+                    remove
                     type="button"
-                    className="list__action-button list__action-button--remove"
                     data-for="removeTaskTooltip"
                     data-tip="Usuń zadanie"
                     onClick={() => removeTask(task.id)}
                 >
-                    <i className="icon-trash-empty list__icon" />
-                </button>
-                <ReactTooltip
+                    <ButtonIcon className="icon-trash-empty" />
+                </ActionButton>
+                <ReactTooltipStyled
                     id="removeTaskTooltip"
-                    className="list__tooltip"
                     textColor="rgb(255, 255, 255)"
                     backgroundColor="rgb(28, 28, 28)"
                     arrowColor="rgb(28, 28, 28)"
@@ -62,9 +67,9 @@ const Tasks = ({
                     delayShow={200}
                     delayHide={200}
                 />
-            </li>
+            </TasksItem>
         ))}
-    </ul>
+    </TasksArea>
 );
 
 export default Tasks;
