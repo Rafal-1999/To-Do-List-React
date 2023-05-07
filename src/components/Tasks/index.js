@@ -18,7 +18,7 @@ const Tasks = ({
     <TasksArea>
         {tasks.map(task => (
             <TasksItem
-                className={`${task.done && hideDoneTasks ? " list__tasks-item--done" : ""}`}
+                done={task.done && hideDoneTasks}
                 key={task.id}
             >
                 <ActionButton
