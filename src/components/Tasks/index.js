@@ -42,8 +42,8 @@ const Tasks = ({
                 />
                 <TasksParagraph>
                     <TasksContent
-                        // className={`${task.done ? done : ""}`}
-                        style={{ transitionDuration: smoothCrossOutTask(task) }}
+                        done={task.done}
+                        transitionTime={smoothCrossOutTask(task)}
                     >
                         {task.content}
                     </TasksContent>

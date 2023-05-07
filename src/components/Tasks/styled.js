@@ -80,6 +80,7 @@ export const TasksContent = styled.span`
     background-position: left center;
     background-repeat: no-repeat;
     transition-property: background-size;
+    transition-duration: ${({ transitionTime }) => transitionTime >= "0.1" ? transitionTime : "0.1s"};
     transition-timing-function: linear;
     word-break: break-word;
 
