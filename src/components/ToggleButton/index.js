@@ -1,16 +1,14 @@
-import "./style.css";
+import { ToggleButtonLabel, ToggleButtonCheckbox } from "./styled";
 
 const ToggleButton = ({ darkMode, toggleDarkMode }) => (
     <>
-        <input
+        <ToggleButtonCheckbox
             type="checkbox"
-            className="list__toggle-button-content"
             id="toggle-button"
             checked={darkMode}
             onChange={() => toggleDarkMode()}
         />
-        <label
-            className="list__toggle-button"
+        <ToggleButtonLabel
             htmlFor="toggle-button"
         />
     </>
