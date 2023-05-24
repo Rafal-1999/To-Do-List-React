@@ -29,7 +29,7 @@ export const ToggleButtonLabel = styled.label`
     }
 
     &::after {
-        content: "\e803";
+        content: "\\e803";
         width: 50%;
         height: 100%;
         color: rgb(255, 255, 255);
@@ -59,7 +59,7 @@ export const ToggleButtonCheckbox = styled.input`
     }
 
     &:checked + ${(ToggleButtonLabel)}::after {
-        content: "\e801";
+        content: "\\e801";
         width: 50%;
         height: 100%;
         color: rgb(0, 0, 0);
