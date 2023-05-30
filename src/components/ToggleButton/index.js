@@ -1,12 +1,12 @@
 import { ToggleButtonLabel, ToggleButtonCheckbox } from "./styled";
 
-const ToggleButton = ({ darkMode, toggleDarkMode }) => (
+const ToggleButton = ({ darkMode, toggleTheme }) => (
     <>
         <ToggleButtonCheckbox
             type="checkbox"
             id="toggle-button"
             checked={darkMode}
-            onChange={() => toggleDarkMode()}
+            onChange={() => toggleTheme()}
         />
         <ToggleButtonLabel
             htmlFor="toggle-button"

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ThemeProvider } from "styled-components";
 import "./fontello/css/fontello.css";
 import Section from "./components/Section";
 import Header from "./components/Header";
@@ -8,10 +9,14 @@ import Form from "./components/Form";
 import Buttons from "./components/Buttons";
 import Tasks from "./components/Tasks";
 import Footer from "./components/Footer";
+import { GlobalStyles } from "./globalStyles";
+import { lightTheme, darkTheme } from "./themes";
 
 function App() {
-    const [darkMode, setDarkMode] = useState(
-        JSON.parse(localStorage.getItem("darkMode") || false)
+    // const [darkMode, setDarkMode] = useState(
+    const [theme, setTheme] = useState(
+        // JSON.parse(localStorage.getItem("darkMode") || false)
+        JSON.parse(localStorage.getItem("theme") || false)
     );
 
     const [tasks, setTasks] = useState(
@@ -25,24 +30,26 @@ function App() {
     }, [tasks]);
 
     useEffect(() => {
-        localStorage.setItem("darkMode", JSON.stringify(darkMode));
+        // localStorage.setItem("darkMode", JSON.stringify(darkMode));
+        localStorage.setItem("theme", JSON.stringify(theme));
 
-        changeDarkMode(darkMode);
-    }, [darkMode]);
+        // changeDarkMode(darkMode);
+    }, [theme]);
 
-    const toggleDarkMode = () => {
-        setDarkMode(darkMode => !darkMode);
+    const toggleTheme = () => {
+        // setDarkMode(darkMode => !darkMode);
+        setTheme(theme ? lightTheme : darkTheme);
     };
 
-    const changeDarkMode = (isDarkMode) => {
-        const bodyElement = document.body;
+    // const changeDarkMode = (isDarkMode) => {
+    //     const bodyElement = document.body;
 
-        if (isDarkMode) {
-            bodyElement.classList.add("dark");
-        } else {
-            bodyElement.removeAttribute("class");
-        }
-    };
+    //     if (isDarkMode) {
+    //         bodyElement.classList.add("dark");
+    //     } else {
+    //         bodyElement.removeAttribute("class");
+    //     }
+    // };
 
     const addNewTask = (taskContent) => {
         setTasks(tasks => [
@@ -98,7 +105,8 @@ function App() {
 
     return (
         // Homework from the module 8 Frontend Developer
-        <>
+        <ThemeProvider theme={theme}>
+            <GlobalStyles />
             <main>
                 <Section>
                     <Header title="Lista zadań" />
@@ -107,8 +115,8 @@ function App() {
                         title="Dodaj nowe zadanie"
                         extraContentTop={
                             <ToggleButton
-                                darkMode={darkMode}
-                                toggleDarkMode={toggleDarkMode}
+                                theme={theme}
+                                toggleTheme={toggleTheme}
                             />
                         }
                         isLayout
@@ -156,7 +164,7 @@ function App() {
                 socialIcon="icon-github"
                 email="rafalchu5@gmail.com"
             />
-        </>
+        </ThemeProvider>
     );
 }
 
