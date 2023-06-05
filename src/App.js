@@ -62,7 +62,6 @@ function App() {
                 <Section>
                     <Header title="Lista zadań" />
                     <Content
-                        classNameTopBox="list__box"
                         title="Dodaj nowe zadanie"
                         extraContentTop={
                             <ToggleButton
@@ -71,7 +70,6 @@ function App() {
                             />
                         }
                         isLayout
-                        classNameBottomBox="list__box list__box--layout"
                         extraContentBottom={
                             <Form
                                 addNewTask={addNewTask}
@@ -81,7 +79,6 @@ function App() {
                     />
                     <Content
                         isVertical
-                        classNameTopBox="list__box list__box--vertical"
                         title="Lista zadań"
                         extraContentTop={
                             <Buttons
@@ -92,7 +89,6 @@ function App() {
                             />
                         }
                         isBlock
-                        classNameBottomBox="list__tasks-block"
                         extraContentBottom={
                             <Tasks
                                 tasks={tasks}
