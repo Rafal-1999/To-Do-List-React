@@ -56,7 +56,8 @@ function App() {
 
     return (
         // Homework from the module 8 Frontend Developer
-        <ThemeProvider theme={theme}>
+        // <ThemeProvider theme={theme}>
+        <>
             <GlobalStyles />
             <main>
                 <Section>
@@ -111,7 +112,8 @@ function App() {
                 socialIcon="icon-github"
                 email="rafalchu5@gmail.com"
             />
-        </ThemeProvider>
+        </>
+        // </ThemeProvider>
     );
 }
 
