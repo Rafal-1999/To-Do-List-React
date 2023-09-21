@@ -1,7 +1,5 @@
 import Tasks from "./features/tasks/Tasks";
 
-function App() {
-    <Tasks />
-}
+const App = () => <Tasks />;
 
 export default App;

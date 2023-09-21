@@ -1,19 +1,17 @@
 import { useState, useEffect } from "react";
-import { ThemeProvider } from "styled-components";
-import { useTasks } from "./hooks/useTasks";
-import Section from "./components/Section";
-import Header from "./components/Header";
-import Content from "./components/Content";
-import ToggleButton from "./components/ToggleButton";
-import Form from "./components/Form";
-import Buttons from "./components/Buttons";
-import Tasks from "./components/Tasks";
-import Footer from "./components/Footer";
-import "./fontello/css/fontello.css";
-import { GlobalStyles } from "./globalStyles";
-import { lightTheme, darkTheme } from "./themes";
+import { useTasks } from "../../hooks/useTasks";
+import Section from "../../components/Section";
+import Header from "../../components/Header";
+import Content from "../../components/Content";
+import ToggleButton from "../../components/ToggleButton";
+import Form from "./Form";
+import Buttons from "./Buttons";
+import TasksList from "./TasksList";
+import Footer from "../../components/Footer";
+import "../../fontello/css/fontello.css";
+// import { lightTheme, darkTheme } from "./themes";
 
-function App() {
+const Tasks = () => {
     // const [darkMode, setDarkMode] = useState(
     const [theme, setTheme] = useState(
         // JSON.parse(localStorage.getItem("darkMode") || false)
@@ -29,7 +27,7 @@ function App() {
 
     const toggleTheme = () => {
         // setDarkMode(darkMode => !darkMode);
-        setTheme(theme ? lightTheme : darkTheme);
+        // setTheme(theme ? lightTheme : darkTheme);
     };
 
     // const changeDarkMode = (isDarkMode) => {
@@ -56,9 +54,7 @@ function App() {
 
     return (
         // Homework from the module 8 Frontend Developer
-        // <ThemeProvider theme={theme}>
         <>
-            <GlobalStyles />
             <main>
                 <Section>
                     <Header title="Lista zadań" />
@@ -91,7 +87,7 @@ function App() {
                         }
                         isBlock
                         extraContentBottom={
-                            <Tasks
+                            <TasksList
                                 tasks={tasks}
                                 hideDoneTasks={hideDoneTasks}
                                 toggleDoneTask={toggleDoneTask}
@@ -113,8 +109,7 @@ function App() {
                 email="rafalchu5@gmail.com"
             />
         </>
-        // </ThemeProvider>
     );
 }
 
-export default App;
+export default Tasks;

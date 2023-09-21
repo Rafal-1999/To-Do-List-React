@@ -8,7 +8,7 @@ import {
     ReactTooltipStyled
 } from "./styled";
 
-const Tasks = ({
+const TasksList = ({
     tasks,
     hideDoneTasks,
     toggleDoneTask,
@@ -72,4 +72,4 @@ const Tasks = ({
     </TasksArea>
 );
 
-export default Tasks;
+export default TasksList;
