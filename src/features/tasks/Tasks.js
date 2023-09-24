@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectTasks } from "./tasksSlice";
 import { useTasks } from "../../hooks/useTasks";
 import Section from "../../components/Section";
 import Header from "../../components/Header";
@@ -40,8 +42,10 @@ const Tasks = () => {
     //     }
     // };
 
+    const { tasks } = useSelector(selectTasks);
+
     const {
-        tasks,
+        // tasks,
         hideDoneTasks,
         addNewTask,
         existTask,
