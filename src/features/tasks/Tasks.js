@@ -46,10 +46,10 @@ const Tasks = () => {
 
     const {
         // tasks,
-        hideDoneTasks,
+        // hideDoneTasks,
         addNewTask,
         existTask,
-        hideAllDoneTasks,
+        // hideAllDoneTasks,
         completeAllTasks,
         toggleDoneTask,
         smoothCrossOutTask,
@@ -83,17 +83,17 @@ const Tasks = () => {
                         title="Lista zadań"
                         extraContentTop={
                             <Buttons
-                                tasks={tasks}
-                                hideDoneTasks={hideDoneTasks}
-                                hideAllDoneTasks={hideAllDoneTasks}
+                                // tasks={tasks}
+                                // hideDoneTasks={hideDoneTasks}
+                                // hideAllDoneTasks={hideAllDoneTasks}
                                 completeAllTasks={completeAllTasks}
                             />
                         }
                         isBlock
                         extraContentBottom={
                             <TasksList
-                                tasks={tasks}
-                                hideDoneTasks={hideDoneTasks}
+                                // tasks={tasks}
+                                // hideDoneTasks={hideDoneTasks}
                                 toggleDoneTask={toggleDoneTask}
                                 removeTask={removeTask}
                                 smoothCrossOutTask={smoothCrossOutTask}
