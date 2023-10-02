@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-import { selectTasks } from "../tasksSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { selectTasks, toggleDoneTask } from "../tasksSlice";
 import {
     TasksArea,
     TasksItem,
@@ -13,11 +13,12 @@ import {
 const TasksList = ({
     // tasks,
     // hideDoneTasks,
-    toggleDoneTask,
+    // toggleDoneTask,
     removeTask,
     smoothCrossOutTask
 }) => {
     const { tasks, hideDone } = useSelector(selectTasks);
+    const dispatch = useDispatch();
 
     return (
         <TasksArea>
@@ -31,7 +32,7 @@ const TasksList = ({
                         type="button"
                         data-for="toggleTaskDoneTooltip"
                         data-tip={`${task.done ? "Wznów" : "Ukończ"} zadanie`}
-                        onClick={() => toggleDoneTask(task.id)}
+                        onClick={() => dispatch(toggleDoneTask(task.id))}
                     >
                         {task.done && <ButtonIcon className="icon-check" />}
                     </ActionButton>

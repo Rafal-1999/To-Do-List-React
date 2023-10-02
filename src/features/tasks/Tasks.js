@@ -51,7 +51,7 @@ const Tasks = () => {
         existTask,
         // hideAllDoneTasks,
         completeAllTasks,
-        toggleDoneTask,
+        // toggleDoneTask,
         smoothCrossOutTask,
         removeTask
     } = useTasks();
@@ -94,7 +94,7 @@ const Tasks = () => {
                             <TasksList
                                 // tasks={tasks}
                                 // hideDoneTasks={hideDoneTasks}
-                                toggleDoneTask={toggleDoneTask}
+                                // toggleDoneTask={toggleDoneTask}
                                 removeTask={removeTask}
                                 smoothCrossOutTask={smoothCrossOutTask}
                             />
