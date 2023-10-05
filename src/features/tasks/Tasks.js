@@ -50,7 +50,7 @@ const Tasks = () => {
         addNewTask,
         existTask,
         // hideAllDoneTasks,
-        completeAllTasks,
+        // completeAllTasks,
         // toggleDoneTask,
         smoothCrossOutTask,
         removeTask
@@ -86,7 +86,7 @@ const Tasks = () => {
                                 // tasks={tasks}
                                 // hideDoneTasks={hideDoneTasks}
                                 // hideAllDoneTasks={hideAllDoneTasks}
-                                completeAllTasks={completeAllTasks}
+                                // completeAllTasks={completeAllTasks}
                             />
                         }
                         isBlock
