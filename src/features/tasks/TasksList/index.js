@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectTasks, toggleDoneTask } from "../tasksSlice";
+import { selectTasks, toggleDoneTask, removeTask } from "../tasksSlice";
 import {
     TasksArea,
     TasksItem,
@@ -14,7 +14,7 @@ const TasksList = ({
     // tasks,
     // hideDoneTasks,
     // toggleDoneTask,
-    removeTask,
+    // removeTask,
     smoothCrossOutTask
 }) => {
     const { tasks, hideDone } = useSelector(selectTasks);
@@ -59,7 +59,7 @@ const TasksList = ({
                         type="button"
                         data-for="removeTaskTooltip"
                         data-tip="Usuń zadanie"
-                        onClick={() => removeTask(task.id)}
+                        onClick={() => dispatch(removeTask(task.id))}
                     >
                         <ButtonIcon className="icon-trash-empty" />
                     </ActionButton>

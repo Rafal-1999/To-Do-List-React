@@ -53,7 +53,7 @@ const Tasks = () => {
         // completeAllTasks,
         // toggleDoneTask,
         smoothCrossOutTask,
-        removeTask
+        // removeTask
     } = useTasks();
 
     return (
@@ -95,7 +95,7 @@ const Tasks = () => {
                                 // tasks={tasks}
                                 // hideDoneTasks={hideDoneTasks}
                                 // toggleDoneTask={toggleDoneTask}
-                                removeTask={removeTask}
+                                // removeTask={removeTask}
                                 smoothCrossOutTask={smoothCrossOutTask}
                             />
                         }
