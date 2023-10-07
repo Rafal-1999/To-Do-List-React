@@ -5,7 +5,7 @@ import { useFocusElement } from "../../../hooks/useFocusElement";
 import { addTask } from "../tasksSlice";
 import { FormArea, FormInput, FormButton } from "./styled";
 
-const Form = ({ addNewTask, existTask }) => {
+const Form = ({ existTask }) => {
     const [taskContent, setTaskContent] = useState("");
 
     const [inputFocus, inputFocusEvent] = useFocusElement();

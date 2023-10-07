@@ -44,17 +44,7 @@ const Tasks = () => {
 
     const { tasks } = useSelector(selectTasks);
 
-    const {
-        // tasks,
-        // hideDoneTasks,
-        addNewTask,
-        existTask,
-        // hideAllDoneTasks,
-        // completeAllTasks,
-        // toggleDoneTask,
-        smoothCrossOutTask,
-        // removeTask
-    } = useTasks();
+    const { existTask, smoothCrossOutTask } = useTasks();
 
     return (
         // Homework from the module 8 Frontend Developer
@@ -72,32 +62,18 @@ const Tasks = () => {
                         }
                         isLayout
                         extraContentBottom={
-                            <Form
-                                addNewTask={addNewTask}
-                                existTask={existTask}
-                            />
+                            <Form existTask={existTask} />
                         }
                     />
                     <Content
                         isVertical
                         title="Lista zadań"
                         extraContentTop={
-                            <Buttons
-                                // tasks={tasks}
-                                // hideDoneTasks={hideDoneTasks}
-                                // hideAllDoneTasks={hideAllDoneTasks}
-                                // completeAllTasks={completeAllTasks}
-                            />
+                            <Buttons />
                         }
                         isBlock
                         extraContentBottom={
-                            <TasksList
-                                // tasks={tasks}
-                                // hideDoneTasks={hideDoneTasks}
-                                // toggleDoneTask={toggleDoneTask}
-                                // removeTask={removeTask}
-                                smoothCrossOutTask={smoothCrossOutTask}
-                            />
+                            <TasksList smoothCrossOutTask={smoothCrossOutTask} />
                         }
                     />
                 </Section>

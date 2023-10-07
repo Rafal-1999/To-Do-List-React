@@ -10,13 +10,7 @@ import {
     ReactTooltipStyled
 } from "./styled";
 
-const TasksList = ({
-    // tasks,
-    // hideDoneTasks,
-    // toggleDoneTask,
-    // removeTask,
-    smoothCrossOutTask
-}) => {
+const TasksList = ({ smoothCrossOutTask }) => {
     const { tasks, hideDone } = useSelector(selectTasks);
     const dispatch = useDispatch();
 
