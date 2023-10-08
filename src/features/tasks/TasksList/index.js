@@ -7,7 +7,8 @@ import {
     ActionButton,
     TasksParagraph,
     TasksContent,
-    ReactTooltipStyled
+    ReactTooltipStyled,
+    TasksInfo
 } from "./styled";
 
 const TasksList = ({ smoothCrossOutTask }) => {
@@ -15,61 +16,65 @@ const TasksList = ({ smoothCrossOutTask }) => {
     const dispatch = useDispatch();
 
     return (
-        <TasksArea>
-            {tasks.map(task => (
-                <TasksItem
-                    done={task.done && hideDone}
-                    key={task.id}
-                >
-                    <ActionButton
-                        done
-                        type="button"
-                        data-for="toggleTaskDoneTooltip"
-                        data-tip={`${task.done ? "Wznów" : "Ukończ"} zadanie`}
-                        onClick={() => dispatch(toggleDoneTask(task.id))}
+        tasks.length > 0 ? (
+            <TasksArea>
+                {tasks.map(task => (
+                    <TasksItem
+                        done={task.done && hideDone}
+                        key={task.id}
                     >
-                        {task.done && <ButtonIcon className="icon-check" />}
-                    </ActionButton>
-                    <ReactTooltipStyled
-                        id="toggleTaskDoneTooltip"
-                        textColor="rgb(255, 255, 255)"
-                        backgroundColor="rgb(28, 28, 28)"
-                        arrowColor="rgb(28, 28, 28)"
-                        place="top"
-                        effect="solid"
-                        delayShow={200}
-                        delayHide={200}
-                    />
-                    <TasksParagraph>
-                        <TasksContent
-                            done={task.done}
-                            transitionTime={smoothCrossOutTask(task)}
+                        <ActionButton
+                            done
+                            type="button"
+                            data-for="toggleTaskDoneTooltip"
+                            data-tip={`${task.done ? "Wznów" : "Ukończ"} zadanie`}
+                            onClick={() => dispatch(toggleDoneTask(task.id))}
                         >
-                            {task.content}
-                        </TasksContent>
-                    </TasksParagraph>
-                    <ActionButton
-                        remove
-                        type="button"
-                        data-for="removeTaskTooltip"
-                        data-tip="Usuń zadanie"
-                        onClick={() => dispatch(removeTask(task.id))}
-                    >
-                        <ButtonIcon className="icon-trash-empty" />
-                    </ActionButton>
-                    <ReactTooltipStyled
-                        id="removeTaskTooltip"
-                        textColor="rgb(255, 255, 255)"
-                        backgroundColor="rgb(28, 28, 28)"
-                        arrowColor="rgb(28, 28, 28)"
-                        place="top"
-                        effect="solid"
-                        delayShow={200}
-                        delayHide={200}
-                    />
-                </TasksItem>
-            ))}
-        </TasksArea>
+                            {task.done && <ButtonIcon className="icon-check" />}
+                        </ActionButton>
+                        <ReactTooltipStyled
+                            id="toggleTaskDoneTooltip"
+                            textColor="rgb(255, 255, 255)"
+                            backgroundColor="rgb(28, 28, 28)"
+                            arrowColor="rgb(28, 28, 28)"
+                            place="top"
+                            effect="solid"
+                            delayShow={200}
+                            delayHide={200}
+                        />
+                        <TasksParagraph>
+                            <TasksContent
+                                done={task.done}
+                                transitionTime={smoothCrossOutTask(task)}
+                            >
+                                {task.content}
+                            </TasksContent>
+                        </TasksParagraph>
+                        <ActionButton
+                            remove
+                            type="button"
+                            data-for="removeTaskTooltip"
+                            data-tip="Usuń zadanie"
+                            onClick={() => dispatch(removeTask(task.id))}
+                        >
+                            <ButtonIcon className="icon-trash-empty" />
+                        </ActionButton>
+                        <ReactTooltipStyled
+                            id="removeTaskTooltip"
+                            textColor="rgb(255, 255, 255)"
+                            backgroundColor="rgb(28, 28, 28)"
+                            arrowColor="rgb(28, 28, 28)"
+                            place="top"
+                            effect="solid"
+                            delayShow={200}
+                            delayHide={200}
+                        />
+                    </TasksItem>
+                ))}
+            </TasksArea>
+        ) : (
+            <TasksInfo>Brak zadań</TasksInfo>
+        )
     )
 };
 

@@ -11,6 +11,8 @@ export const TasksItem = styled.li`
     padding: 10px 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     border-bottom: 2px solid rgb(227, 227, 227);
 
     &:hover,
@@ -68,10 +70,17 @@ export const ActionButton = styled.button`
 `;
 
 export const TasksParagraph = styled.p`
-    margin: 0 15px;
+    margin: 0 0 15px;
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 100px;
+    flex-basis: 100%;
+    order: -1;
+
+    @media (min-width: 320px) {
+        margin: 0 15px;
+        flex-basis: 100px;
+        order: 0;
+    }
 `;
 
 export const TasksContent = styled.span`
@@ -92,4 +101,8 @@ export const TasksContent = styled.span`
 export const ReactTooltipStyled = styled(ReactTooltip)`
     margin-top: -15px !important;
     padding: 10px 20px !important;
+`;
+
+export const TasksInfo = styled.p`
+    margin: 0;
 `;
