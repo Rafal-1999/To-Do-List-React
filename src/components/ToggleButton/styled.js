@@ -9,6 +9,7 @@ export const ToggleButtonLabel = styled.label`
         0px 2px 5px 1px rgba(20, 20, 20, 0.75) inset,
         0px -2px 5px 1px rgba(20, 20, 20, 0.75) inset;
     display: block;
+    flex-shrink: 0;
     position: relative;
     transition: all 0.3s linear;
     z-index: 1;

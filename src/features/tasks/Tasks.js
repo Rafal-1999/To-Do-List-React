@@ -80,9 +80,8 @@ const Tasks = () => {
             </main>
             <Footer
                 creator="Rafał Chudy"
-                designer="YouCode"
                 copyright="wszelkie prawa zastrzeżone"
-                year="2022"
+                year="2022 - 2023"
                 socialLink="https://github.com/Rafal-1999"
                 socialName="GitHub"
                 socialIcon="icon-github"

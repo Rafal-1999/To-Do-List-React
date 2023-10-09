@@ -36,7 +36,7 @@ const Footer = ({
             {(copyright && year) && (
                 <FooterContent>
                     {copyright} <Awarded>
-                        &copy;{year}
+                        &copy; {year}
                     </Awarded>
                 </FooterContent>
             )}

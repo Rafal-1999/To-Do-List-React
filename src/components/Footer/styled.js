@@ -58,6 +58,7 @@ export const FooterLink = styled.a`
     line-height: 1.19;
     text-decoration: none;
     transition: background-size 0.3s linear;
+    word-break: break-all;
 
     &:hover,
     &:focus {
@@ -67,4 +68,5 @@ export const FooterLink = styled.a`
 
 export const FooterIcon = styled.i`
     font-size: 24px;
+    line-height: 1;
 `;
