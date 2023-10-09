@@ -30,18 +30,5 @@ export const HeaderTwo = styled.h2`
 `;
 
 export const BottomBox = styled.div`
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid rgb(227, 227, 227);
     padding: 25px;
-
-    ${({ layout }) => layout && css`
-        display: block;
-        border: 0;
-    `}
-
-    ${({ block }) => block && css`
-        display: block;
-        padding: 25px;
-    `}
 `;

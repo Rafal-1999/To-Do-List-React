@@ -60,7 +60,6 @@ const Tasks = () => {
                                 toggleTheme={toggleTheme}
                             />
                         }
-                        isLayout
                         extraContentBottom={
                             <Form existTask={existTask} />
                         }
@@ -71,7 +70,6 @@ const Tasks = () => {
                         extraContentTop={
                             <Buttons />
                         }
-                        isBlock
                         extraContentBottom={
                             <TasksList smoothCrossOutTask={smoothCrossOutTask} />
                         }

@@ -4,8 +4,6 @@ const Content = ({
     isVertical,
     title,
     extraContentTop,
-    isLayout,
-    isBlock,
     extraContentBottom
 }) => (
     <Block>
@@ -15,7 +13,7 @@ const Content = ({
             </HeaderTwo>
             {extraContentTop}
         </TopBox>
-        <BottomBox layout={isLayout} block={isBlock}>
+        <BottomBox>
             {extraContentBottom}
         </BottomBox>
     </Block>
