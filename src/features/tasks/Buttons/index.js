@@ -15,6 +15,7 @@ const Buttons = () => {
                 <Button
                     disabled={tasks.every(({ done }) => done)}
                     onClick={() => dispatch(completeAllTasks())}
+                    cursorDefault={tasks.every(({ done }) => done)}
                 >
                     Ukończ wszystkie
                 </Button>

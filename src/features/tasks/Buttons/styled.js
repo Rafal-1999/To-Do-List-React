@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Box = styled.div`
     display: flex;
@@ -20,6 +20,10 @@ export const Button = styled.button`
     font-size: 18px;
     transition: color 0.3s linear;
     cursor: pointer;
+
+    ${({ cursorDefault }) => cursorDefault && css`
+        cursor: default;
+    `}
 
     &:hover,
     &:focus {
