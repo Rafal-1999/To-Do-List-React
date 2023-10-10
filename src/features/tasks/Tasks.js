@@ -53,6 +53,7 @@ const Tasks = () => {
                 <Section>
                     <Header title="Lista zadań" />
                     <Content
+                        isDirection
                         title="Dodaj nowe zadanie"
                         extraContentTop={
                             <ToggleButton

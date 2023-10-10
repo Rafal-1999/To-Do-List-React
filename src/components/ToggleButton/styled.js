@@ -45,6 +45,10 @@ export const ToggleButtonLabel = styled.label`
         transition: all 0.15s linear;
         transition-delay: 0.15s;
     }
+
+    @media (max-width: 320px) {
+        margin-left: auto;
+    }
 `;
 
 export const ToggleButtonCheckbox = styled.input`

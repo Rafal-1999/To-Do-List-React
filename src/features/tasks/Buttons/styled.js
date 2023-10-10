@@ -7,7 +7,6 @@ export const Box = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        margin: 20px 0;
     }
 `;
 
