@@ -26,6 +26,7 @@ const TasksList = ({ smoothCrossOutTask }) => {
                         <ActionButton
                             done
                             type="button"
+                            aria-label="Ukończ lub wznów zadanie"
                             data-for="toggleTaskDoneTooltip"
                             data-tip={`${task.done ? "Wznów" : "Ukończ"} zadanie`}
                             onClick={() => dispatch(toggleDoneTask(task.id))}
@@ -53,6 +54,7 @@ const TasksList = ({ smoothCrossOutTask }) => {
                         <ActionButton
                             remove
                             type="button"
+                            aria-label="Usuń zadanie"
                             data-for="removeTaskTooltip"
                             data-tip="Usuń zadanie"
                             onClick={() => dispatch(removeTask(task.id))}

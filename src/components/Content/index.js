@@ -1,14 +1,14 @@
 import { Block, TopBox, HeaderTwo, BottomBox } from "./styled";
 
 const Content = ({
-    isDirection,
+    isLayout,
     isVertical,
     title,
     extraContentTop,
     extraContentBottom
 }) => (
     <Block>
-        <TopBox direction={isDirection} vertical={isVertical}>
+        <TopBox layout={isLayout} vertical={isVertical}>
             <HeaderTwo>
                 {title}
             </HeaderTwo>

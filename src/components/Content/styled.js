@@ -14,7 +14,7 @@ export const TopBox = styled.div`
     row-gap: 20px;
     border-bottom: 2px solid rgb(227, 227, 227);
 
-    ${({ direction }) => direction && css`
+    ${({ layout }) => layout && css`
         column-gap: 15px;
 
         @media (max-width: 320px) {
