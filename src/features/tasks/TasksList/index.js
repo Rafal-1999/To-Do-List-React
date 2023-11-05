@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useTasks } from "../../../hooks/useTasks";
 import { selectTasks, toggleDoneTask, removeTask } from "../tasksSlice";
 import {
     TasksArea,
@@ -11,7 +12,9 @@ import {
     TasksInfo
 } from "./styled";
 
-const TasksList = ({ smoothCrossOutTask }) => {
+const TasksList = () => {
+    const { smoothCrossOutTask } = useTasks();
+
     const { tasks, hideDone } = useSelector(selectTasks);
     const dispatch = useDispatch();
 

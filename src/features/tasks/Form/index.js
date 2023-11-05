@@ -1,22 +1,32 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { useFocusElement } from "../../../hooks/useFocusElement";
-import { addTask } from "../tasksSlice";
+import { selectTasks, addTask } from "../tasksSlice";
 import { FormArea, FormInput, FormButton } from "./styled";
 
-const Form = ({ existTask }) => {
+const Form = () => {
     const [taskContent, setTaskContent] = useState("");
 
     const [inputFocus, inputFocusEvent] = useFocusElement();
 
+    const { tasks } = useSelector(selectTasks);
     const dispatch = useDispatch();
+
+    const isTaskEmpty = (taskContent) => taskContent.length === 0;
+
+    const existsTask = (taskContent) => {
+        if (tasks.some(({ content }) => content === taskContent)) {
+            alert("Podane zadanie jest już na liście.");
+            return true;
+        }
+    };
 
     const onFormSubmit = (e) => {
         e.preventDefault();
 
         const trimedTaskContent = taskContent.trim();
-        if (isTaskEmpty(trimedTaskContent) && !existTask(trimedTaskContent)) {
+        if (!isTaskEmpty(trimedTaskContent) && !existsTask(trimedTaskContent)) {
             dispatch(addTask({
                 id: nanoid(),
                 content: trimedTaskContent,
@@ -25,8 +35,6 @@ const Form = ({ existTask }) => {
             setTaskContent("");
         }
     };
-
-    const isTaskEmpty = (taskContent) => taskContent.length !== 0;
 
     return (
         <FormArea onSubmit={onFormSubmit}>

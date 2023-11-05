@@ -1,7 +1,4 @@
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectTasks } from "./tasksSlice";
-import { useTasks } from "../../hooks/useTasks";
 import Section from "../../components/Section";
 import Header from "../../components/Header";
 import Content from "../../components/Content";
@@ -42,12 +39,7 @@ const Tasks = () => {
     //     }
     // };
 
-    const { tasks } = useSelector(selectTasks);
-
-    const { existTask, smoothCrossOutTask } = useTasks();
-
     return (
-        // Homework from the module 8 Frontend Developer
         <>
             <main>
                 <Section>
@@ -62,7 +54,7 @@ const Tasks = () => {
                             />
                         }
                         extraContentBottom={
-                            <Form existTask={existTask} />
+                            <Form />
                         }
                     />
                     <Content
@@ -72,7 +64,7 @@ const Tasks = () => {
                             <Buttons />
                         }
                         extraContentBottom={
-                            <TasksList smoothCrossOutTask={smoothCrossOutTask} />
+                            <TasksList />
                         }
                     />
                 </Section>
