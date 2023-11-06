@@ -43,16 +43,16 @@ const Tasks = () => {
         <>
             <main>
                 <Section>
-                    <Header title="Lista zadań" />
+                    <Header
+                        title="Lista zadań"
+                        extraElement={
+                            <ToggleButton />
+                        }
+                    />
                     <Content
                         isLayout
                         title="Dodaj nowe zadanie"
-                        extraContentTop={
-                            <ToggleButton
-                                theme={theme}
-                                toggleTheme={toggleTheme}
-                            />
-                        }
+                        extraContentTop={<></>}
                         extraContentBottom={
                             <Form />
                         }

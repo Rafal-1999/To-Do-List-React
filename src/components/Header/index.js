@@ -1,11 +1,12 @@
-import { HeaderOne } from "./styled";
+import { StyledHeader, HeaderOne } from "./styled";
 
-const Header = ({ title }) => (
-    <header>
+const Header = ({ title, extraElement }) => (
+    <StyledHeader>
         <HeaderOne>
             {title}
         </HeaderOne>
-    </header>
+        {extraElement}
+    </StyledHeader>
 );
 
 export default Header;

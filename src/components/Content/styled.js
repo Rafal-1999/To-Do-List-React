@@ -14,14 +14,6 @@ export const TopBox = styled.div`
     row-gap: 20px;
     border-bottom: 2px solid rgb(227, 227, 227);
 
-    ${({ layout }) => layout && css`
-        column-gap: 15px;
-
-        @media (max-width: 320px) {
-            flex-direction: column-reverse;
-        }
-    `}
-
     @media (max-width: 768px) {
         ${({ vertical }) => vertical && css`
             flex-direction: column;
