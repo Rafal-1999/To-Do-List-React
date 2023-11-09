@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { selectTasks, toggleHideDone, completeAllTasks } from "../tasksSlice";
-import { Box } from "./styled";
-import { Button } from "../../../components/styled";
+import { Box, Button } from "../../../components/styled";
 
 const Buttons = () => {
     const { tasks, hideDone } = useSelector(selectTasks);

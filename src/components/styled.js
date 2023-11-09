@@ -1,5 +1,15 @@
 import styled, { css } from "styled-components";
 
+export const Box = styled.div`
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
 export const Button = styled.button`
     color: rgb(0, 116, 131);
     background: none;

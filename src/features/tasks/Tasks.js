@@ -7,7 +7,7 @@ import Form from "./Form";
 import Buttons from "./Buttons";
 import TasksList from "./TasksList";
 import Footer from "../../components/Footer";
-import { Button } from "../../components/styled";
+import { Box, Button } from "../../components/styled";
 import "../../fontello/css/fontello.css";
 // import { lightTheme, darkTheme } from "./themes";
 
@@ -51,12 +51,14 @@ const Tasks = () => {
                         }
                     />
                     <Content
-                        isLayout
+                        isVertical
                         title="Dodaj nowe zadanie"
                         extraContentTop={
-                            <Button>
-                                Pobierz przykładowe zadania
-                            </Button>
+                            <Box>
+                                <Button>
+                                    Pobierz przykładowe zadania
+                                </Button>
+                            </Box>
                         }
                         extraContentBottom={
                             <Form />
