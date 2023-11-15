@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Section from "../../components/Section";
 import Header from "../../components/Header";
 import Content from "../../components/Content";
@@ -8,6 +9,7 @@ import Buttons from "./Buttons";
 import TasksList from "./TasksList";
 import Footer from "../../components/Footer";
 import { Box, Button } from "../../components/styled";
+import { fetchExampleTasks } from "./tasksSlice";
 import "../../fontello/css/fontello.css";
 // import { lightTheme, darkTheme } from "./themes";
 
@@ -40,6 +42,8 @@ const Tasks = () => {
     //     }
     // };
 
+    const dispatch = useDispatch();
+
     return (
         <>
             <main>
@@ -55,7 +59,7 @@ const Tasks = () => {
                         title="Dodaj nowe zadanie"
                         extraContentTop={
                             <Box>
-                                <Button>
+                                <Button onClick={() => dispatch(fetchExampleTasks())}>
                                     Pobierz przykładowe zadania
                                 </Button>
                             </Box>
