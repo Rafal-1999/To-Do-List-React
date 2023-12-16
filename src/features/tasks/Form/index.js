@@ -10,7 +10,7 @@ const Form = () => {
 
     const [inputFocus, inputFocusEvent] = useFocusElement();
 
-    const { tasks } = useSelector(selectTasks);
+    const tasks = useSelector(selectTasks);
     const dispatch = useDispatch();
 
     const isTaskEmpty = (taskContent) => taskContent.length === 0;
