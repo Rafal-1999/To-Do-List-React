@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Section from "../../components/Section";
 import Header from "../../components/Header";
+import ThemeToggle from "../themeToggle/ThemeToggle";
 import Content from "../../components/Content";
-import ToggleButton from "../../components/ToggleButton";
 import Form from "./Form";
 import Buttons from "./Buttons";
 import TasksList from "./TasksList";
@@ -11,37 +11,8 @@ import Footer from "../../components/Footer";
 import { Box, Button } from "../../components/styled";
 import { fetchExampleTasks } from "./tasksSlice";
 import "../../fontello/css/fontello.css";
-// import { lightTheme, darkTheme } from "./themes";
 
 const Tasks = () => {
-    // const [darkMode, setDarkMode] = useState(
-    const [theme, setTheme] = useState(
-        // JSON.parse(localStorage.getItem("darkMode") || false)
-        JSON.parse(localStorage.getItem("theme") || false)
-    );
-
-    useEffect(() => {
-        // localStorage.setItem("darkMode", JSON.stringify(darkMode));
-        localStorage.setItem("theme", JSON.stringify(theme));
-
-        // changeDarkMode(darkMode);
-    }, [theme]);
-
-    const toggleTheme = () => {
-        // setDarkMode(darkMode => !darkMode);
-        // setTheme(theme ? lightTheme : darkTheme);
-    };
-
-    // const changeDarkMode = (isDarkMode) => {
-    //     const bodyElement = document.body;
-
-    //     if (isDarkMode) {
-    //         bodyElement.classList.add("dark");
-    //     } else {
-    //         bodyElement.removeAttribute("class");
-    //     }
-    // };
-
     const dispatch = useDispatch();
 
     return (
@@ -51,7 +22,7 @@ const Tasks = () => {
                     <Header
                         title="Lista zadań"
                         extraElement={
-                            <ToggleButton />
+                            <ThemeToggle />
                         }
                     />
                     <Content
