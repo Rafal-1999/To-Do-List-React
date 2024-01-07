@@ -20,13 +20,14 @@ export const FooterBox = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
 
-    @media (min-width: 577px) {
-        ${({ alignment }) => alignment && css`
+    ${({ alignment }) => alignment && css`
+        @media (min-width: 577px) {
+            justify-content: flex-start;
             align-items: flex-end;
-        `}
-    }
+        }
+    `}
 `;
 
 export const FooterContent = styled.p`
@@ -66,7 +67,7 @@ export const FooterLink = styled.a`
     }
 
     ${({ marginTop }) => marginTop && css`
-        @media (max-width: 576px) and (hover: none) {
+        @media (hover: none) {
             margin-top: 20px;
         }
     `}
