@@ -10,7 +10,7 @@ export const FooterArea = styled.footer`
     flex-direction: column;
     gap: 20px;
 
-    @media (min-width: 576px) {
+    @media (min-width: 577px) {
         flex-direction: row;
         gap: 0;
     }
@@ -22,7 +22,7 @@ export const FooterBox = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    @media (min-width: 576px) {
+    @media (min-width: 577px) {
         ${({ alignment }) => alignment && css`
             align-items: flex-end;
         `}
@@ -64,6 +64,12 @@ export const FooterLink = styled.a`
     &:focus {
         background-size: 100% 1px;
     }
+
+    ${({ marginTop }) => marginTop && css`
+        @media (max-width: 576px) and (hover: none) {
+            margin-top: 20px;
+        }
+    `}
 `;
 
 export const FooterIcon = styled.i`

@@ -57,6 +57,7 @@ const Footer = ({
                 <FooterLink
                     href={`mailto:${email}`}
                     title={`Napisz do: ${email}`}
+                    marginTop
                 >
                     {email}
                 </FooterLink>
