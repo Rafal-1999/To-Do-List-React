@@ -50,7 +50,7 @@ const Footer = ({
                     rel="noreferrer"
                 >
                     {socialName}
-                    <FooterIcon className={socialIcon}></FooterIcon>
+                    <FooterIcon className={socialIcon} />
                 </FooterLink>
             )}
             {email && (
