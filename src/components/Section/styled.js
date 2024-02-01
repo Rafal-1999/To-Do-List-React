@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const SectionList = styled.section`
-    margin-top: 50px;
+export const StyledSection = styled.section`
+    margin-top: 20px;
 `;

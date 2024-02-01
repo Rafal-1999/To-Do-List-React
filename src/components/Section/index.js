@@ -1,9 +1,9 @@
-import { SectionList } from "./styled";
+import { StyledSection } from "./styled";
 
 const Section = ({ children }) => (
-    <SectionList>
+    <StyledSection>
         {children}
-    </SectionList>
+    </StyledSection>
 );
 
 export default Section;
