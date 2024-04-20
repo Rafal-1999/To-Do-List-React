@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
     *, ::before, ::after {
@@ -14,13 +14,16 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 25px;
         font-family: "Montserrat", sans-serif;
+    }
+`;
 
-        @media (max-width: 576px) {
-            padding: 0 10px;
-        }
+export const Container = styled.div`
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    @media (min-width: 576px) {
+        padding: 0 25px;
     }
 `;
