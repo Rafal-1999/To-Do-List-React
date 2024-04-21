@@ -14,11 +14,11 @@ export const TopBox = styled.div`
     row-gap: 20px;
     border-bottom: 2px solid rgb(227, 227, 227);
 
-    @media (max-width: 768px) {
-        ${({ vertical }) => vertical && css`
+    ${({ vertical }) => vertical && css`
+        @media (max-width: 768px) {
             flex-direction: column;
-        `}
-    }
+        }
+    `}
 `;
 
 export const HeaderTwo = styled.h2`
@@ -27,6 +27,7 @@ export const HeaderTwo = styled.h2`
 
     @media (max-width: 576px) {
         font-size: 20px;
+        word-break: break-word;
     }
 `;
 

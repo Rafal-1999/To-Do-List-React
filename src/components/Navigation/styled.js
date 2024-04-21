@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const StyledNavigation = styled.ul`
     list-style: none;

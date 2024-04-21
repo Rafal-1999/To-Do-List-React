@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
     FooterArea,
     FooterBox,
@@ -22,7 +23,9 @@ const Footer = ({
             {creator && (
                 <FooterContent>
                     wykonawca: <Awarded>
-                        {creator}
+                        <FooterLink to="/autor" title="Przejdź do podstrony O autorze" as={Link}>
+                            {creator}
+                        </FooterLink>
                     </Awarded>
                 </FooterContent>
             )}
@@ -55,9 +58,9 @@ const Footer = ({
             )}
             {email && (
                 <FooterLink
+                    marginTop
                     href={`mailto:${email}`}
                     title={`Napisz do: ${email}`}
-                    marginTop
                 >
                     {email}
                 </FooterLink>

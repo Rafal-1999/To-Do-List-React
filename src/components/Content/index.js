@@ -1,4 +1,9 @@
-import { Block, TopBox, HeaderTwo, BottomBox } from "./styled";
+import {
+    Block,
+    TopBox,
+    HeaderTwo,
+    BottomBox
+} from "./styled";
 
 const Content = ({
     isLayout,

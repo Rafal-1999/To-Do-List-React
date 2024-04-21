@@ -51,7 +51,7 @@ export const FooterLink = styled.a`
     background-size: 0% 1px;
     background-repeat: no-repeat;
     background-position: left bottom;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
     font-size: 16px;
@@ -61,8 +61,7 @@ export const FooterLink = styled.a`
     transition: background-size 0.3s linear;
     word-break: break-all;
 
-    &:hover,
-    &:focus {
+    &:hover {
         background-size: 100% 1px;
     }
 
