@@ -1,4 +1,5 @@
 import Tasks from "./pages/Tasks";
+import Task from "./pages/Task";
 import Author from "./pages/Author";
 import NotFound from "./pages/NotFound";
 
@@ -8,6 +9,12 @@ const routes = [
         path: "/zadania",
         element: <Tasks />,
         title: "zadania"
+    },
+    {
+        name: "Zadanie",
+        path: "/zadania/:id",
+        element: <Task />,
+        title: "zadanie"
     },
     {
         name: "O autorze",
