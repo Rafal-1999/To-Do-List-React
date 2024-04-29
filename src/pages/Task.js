@@ -1,27 +1,19 @@
 import Header from "../components/Header";
 import ThemeToggle from "../features/themeToggle/ThemeToggle";
-import Section from "../components/Section";
-import Content from "../components/Content";
+import TaskDetails from "../features/tasks/TaskDetails";
 
-const Task = () => {
-    return (
-        <>
-            <Header
-                title="Szczegóły zadania"
-                extraElement={<ThemeToggle />}
-            />
-            <main>
-                <Section>
-                    <Content
-                        title={"Treść zadania"}
-                        extraContentBottom={
-                            <p><span>Ukończone: </span>{"Tak lub Nie"}</p>
-                        }
-                    />
-                </Section>
-            </main>
-        </>
-    )
-};
+const Task = () => (
+    <>
+        <Header
+            title="Szczegóły zadania"
+            extraElement={
+                <ThemeToggle />
+            }
+        />
+        <main>
+            <TaskDetails />
+        </main>
+    </>
+);
 
 export default Task;

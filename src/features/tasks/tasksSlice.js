@@ -43,4 +43,5 @@ export const {
 } = tasksSlice.actions;
 export const selectTasksState = (state) => state.tasks;
 export const selectTasks = (state) => selectTasksState(state).tasks;
+export const getTaskById = (state, taskId) => selectTasks(state).find(({ id }) => id === taskId);
 export default tasksSlice.reducer;

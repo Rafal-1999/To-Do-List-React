@@ -8,6 +8,7 @@ import {
     ActionButton,
     TasksParagraph,
     TasksContent,
+    TasksLink,
     ReactTooltipStyled,
     TasksInfo
 } from "./styled";
@@ -51,7 +52,9 @@ const TasksList = () => {
                                 done={task.done}
                                 transitionTime={smoothCrossOutTask(task)}
                             >
-                                {task.content}
+                                <TasksLink to={`/zadania/${task.id}`} title="Przejdź do szczegółów zadania">
+                                    {task.content}
+                                </TasksLink>
                             </TasksContent>
                         </TasksParagraph>
                         <ActionButton

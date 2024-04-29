@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 import styled, { css } from "styled-components";
 
@@ -96,6 +97,17 @@ export const TasksContent = styled.span`
     ${({ done }) => done && css`
         background-size: 100% 1px;
     `}
+`;
+
+export const TasksLink = styled(Link)`
+    color: rgb(0, 116, 131);
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    &:hover {
+        color: rgb(0, 160, 200);
+        text-decoration: underline;
+    }
 `;
 
 export const ReactTooltipStyled = styled(ReactTooltip)`
