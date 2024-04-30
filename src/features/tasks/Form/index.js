@@ -4,6 +4,7 @@ import { nanoid } from "@reduxjs/toolkit";
 import { useFocusElement } from "../../../hooks/useFocusElement";
 import { selectTasks, addTask } from "../tasksSlice";
 import { FormArea, FormInput, FormButton } from "./styled";
+import { HiddenFormLabel } from "../styled";
 
 const Form = () => {
     const [taskContent, setTaskContent] = useState("");
@@ -38,7 +39,9 @@ const Form = () => {
 
     return (
         <FormArea onSubmit={onFormSubmit}>
+            <HiddenFormLabel htmlFor="tasks">Dodaj nowe zadanie</HiddenFormLabel>
             <FormInput
+                id="tasks"
                 type="text"
                 placeholder="Co jest do zrobienia?"
                 autoFocus

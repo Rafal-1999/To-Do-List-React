@@ -5,6 +5,7 @@ import Form from "./Form";
 import Buttons from "./Buttons";
 import TasksList from "./TasksList";
 import { Box, Button } from "../../components/styled";
+import { HiddenFormLabel, SearchEngine } from "./styled";
 import { fetchExampleTasks } from "./tasksSlice";
 import "../../fontello/css/fontello.css";
 
@@ -25,6 +26,19 @@ const Tasks = () => {
                 }
                 extraContentBottom={
                     <Form />
+                }
+            />
+            <Content
+                title="Wyszukiwarka"
+                extraContentBottom={
+                    <form>
+                        <HiddenFormLabel htmlFor="search">Wyszukaj zadanie</HiddenFormLabel>
+                        <SearchEngine
+                            id="search"
+                            type="text"
+                            placeholder="Filtruj zadania"
+                        />
+                    </form>
                 }
             />
             <Content
