@@ -4,12 +4,12 @@ const Navigation = () => (
     <nav>
         <StyledNavigation>
             <NavigationItem>
-                <NavigationLink $activeClassName="active" to="/zadania" >
+                <NavigationLink $activeClassName="active" to="/zadania">
                     Zadania
                 </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-                <NavigationLink $activeClassName="active" to="/autor"  >
+                <NavigationLink $activeClassName="active" to="/autor">
                     O autorze
                 </NavigationLink>
             </NavigationItem>
