@@ -10,8 +10,3 @@ export const HiddenFormLabel = styled.label`
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
 `;
-
-export const SearchEngine = styled.input`
-    width: 100%;
-    padding: 10px;
-`;
