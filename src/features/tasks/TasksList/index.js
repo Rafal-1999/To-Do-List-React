@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useQueryParameter } from "../queryParameters";
 import { useTasks } from "../../../hooks/useTasks";
 import {
-    selectTasks,
+    selectTasksByQuery,
     selectHideDone,
     toggleDoneTask,
     removeTask
@@ -19,9 +20,10 @@ import {
 } from "./styled";
 
 const TasksList = () => {
+    const query = useQueryParameter("szukaj");
     const { smoothCrossOutTask } = useTasks();
 
-    const tasks = useSelector(selectTasks);
+    const tasks = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
     const dispatch = useDispatch();
 
@@ -87,7 +89,9 @@ const TasksList = () => {
                 ))}
             </TasksArea>
         ) : (
-            <TasksInfo>Brak zadań</TasksInfo>
+            <TasksInfo>
+                {query ? "Nie znaleziono zadania o podanej treści" : "Brak zadań"}
+            </TasksInfo>
         )
     )
 };
