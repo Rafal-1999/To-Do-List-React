@@ -1,10 +1,12 @@
 import { useQueryParameter, useReplaceQueryParameter } from "../queryParameters";
+import { useEmptySearchParams } from "../hooks/useEmptySearchParams";
 import { SearchEngine } from "./styled";
 import { HiddenFormLabel } from "../styled";
 
 const Search = () => {
     const query = useQueryParameter("szukaj");
     const replaceQueryParameter = useReplaceQueryParameter();
+    useEmptySearchParams();
 
     const onInputChange = ({ target }) => {
         replaceQueryParameter({
