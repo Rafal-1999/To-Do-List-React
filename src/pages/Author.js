@@ -16,7 +16,7 @@ const Author = () => (
                 <Content
                     title="Rafał Chudy - Junior Frontend Developer"
                     extraContentBottom={
-                        <p>Tekst</p>
+                        <span>Tekst</span>
                     }
                 />
             </Section>
