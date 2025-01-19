@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
+import { Normalize } from "styled-normalize";
 import store from "./store";
 // import { ThemeProvider } from "styled-components";
 import App from "./App";
@@ -14,6 +15,7 @@ root.render(
     <React.StrictMode>
         <Provider store={store}>
             {/* <ThemeProvider theme={theme}> */}
+            <Normalize />
             <GlobalStyles />
             <App />
             {/* </ThemeProvider> */}
