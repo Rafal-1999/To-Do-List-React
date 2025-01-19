@@ -6,6 +6,7 @@ import store from "./store";
 // import { ThemeProvider } from "styled-components";
 import App from "./App";
 import { GlobalStyles } from "./globalStyles";
+import "./assets/css/fontello.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

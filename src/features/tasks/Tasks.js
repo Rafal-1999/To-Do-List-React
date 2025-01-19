@@ -7,7 +7,6 @@ import Buttons from "./Buttons";
 import TasksList from "./TasksList";
 import { Box, Button } from "../../components/styled";
 import { fetchExampleTasks } from "./tasksSlice";
-import "../../fontello/css/fontello.css";
 
 const Tasks = () => {
     const dispatch = useDispatch();
