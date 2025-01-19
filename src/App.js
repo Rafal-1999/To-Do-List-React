@@ -14,6 +14,8 @@ const App = () => {
         return <Route key={title} path={path} element={element} />;
     });
 
+    const currentYear = new Date().getFullYear();
+
     return (
         <HashRouter>
             <Navigation />
@@ -25,7 +27,7 @@ const App = () => {
                 <Footer
                     creator="Rafał Chudy"
                     copyright="wszelkie prawa zastrzeżone"
-                    year="2022 - 2024"
+                    year={`2022 - ${currentYear}`}
                     socialLink="https://github.com/Rafal-1999"
                     socialName="GitHub"
                     socialIcon="icon-github"
