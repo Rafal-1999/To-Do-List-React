@@ -4,7 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { Normalize } from "styled-normalize";
 import store from "./store";
-// import { ThemeProvider } from "styled-components";
+import { ThemeContext } from "./ThemeContext";
 import App from "./App";
 import { GlobalStyles } from "./globalStyles";
 import "./assets/css/montserrat.css";
@@ -14,11 +14,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            {/* <ThemeProvider theme={theme}> */}
-            <Normalize />
-            <GlobalStyles />
-            <App />
-            {/* </ThemeProvider> */}
+            <ThemeContext>
+                <Normalize />
+                <GlobalStyles />
+                <App />
+            </ThemeContext>
         </Provider>
     </React.StrictMode>
 );

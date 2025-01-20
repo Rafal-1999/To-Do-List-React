@@ -1,22 +1,8 @@
-import { useState, useEffect } from "react";
+import { useTheme } from "../../ThemeContext";
 import { StyledThemeToggle } from "./styled";
 
 const ThemeToggle = () => {
-    const [theme, setTheme] = useState("light");
-
-    useEffect(() => {
-        const localTheme = localStorage.getItem("theme");
-        localTheme ? setTheme(localTheme) : setThemeMode("light");
-    }, []);
-
-    const setThemeMode = themeMode => {
-        localStorage.setItem("theme", themeMode);
-        setTheme(themeMode);
-    };
-
-    const toggleTheme = () => {
-        theme === "light" ? setThemeMode("dark") : setThemeMode("light");
-    };
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <StyledThemeToggle
