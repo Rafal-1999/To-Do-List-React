@@ -5,7 +5,7 @@ import Form from "./Form";
 import Search from "./Search";
 import Buttons from "./Buttons";
 import TasksList from "./TasksList";
-import { Box, Button } from "../../components/styled";
+import { Box, Button } from "./styled";
 import { fetchExampleTasks } from "./tasksSlice";
 
 const Tasks = () => {
