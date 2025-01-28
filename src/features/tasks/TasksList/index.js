@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useTheme } from "styled-components";
 import { useQueryParameter } from "../queryParameters";
 import { useTasks } from "../../../hooks/useTasks";
 import {
@@ -22,6 +23,7 @@ import {
 const TasksList = () => {
     const query = useQueryParameter("szukaj");
     const { smoothCrossOutTask } = useTasks();
+    const theme = useTheme();
 
     const tasks = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
@@ -47,9 +49,9 @@ const TasksList = () => {
                         </ActionButton>
                         <ReactTooltipStyled
                             id="toggleTaskDoneTooltip"
-                            textColor="rgb(255, 255, 255)"
-                            backgroundColor="rgb(28, 28, 28)"
-                            arrowColor="rgb(28, 28, 28)"
+                            textColor={theme.tooltip.color}
+                            backgroundColor={theme.tooltip.background}
+                            arrowColor={theme.tooltip.background}
                             place="top"
                             effect="solid"
                             delayShow={200}
@@ -77,9 +79,9 @@ const TasksList = () => {
                         </ActionButton>
                         <ReactTooltipStyled
                             id="removeTaskTooltip"
-                            textColor="rgb(255, 255, 255)"
-                            backgroundColor="rgb(28, 28, 28)"
-                            arrowColor="rgb(28, 28, 28)"
+                            textColor={theme.tooltip.color}
+                            backgroundColor={theme.tooltip.background}
+                            arrowColor={theme.tooltip.background}
                             place="top"
                             effect="solid"
                             delayShow={200}

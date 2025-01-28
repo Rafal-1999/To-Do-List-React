@@ -11,12 +11,12 @@ export const Box = styled.div`
 `;
 
 export const Button = styled.button`
-    color: rgb(0, 116, 131);
+    color: ${({ theme }) => theme.unfilledButton.color};
     background: none;
     padding: 0;
     border: none;
     font-size: 18px;
-    transition: color 0.3s linear;
+    transition: color ${({ theme }) => theme.transitionDuration} linear;
     cursor: pointer;
 
     ${({ cursorDefault }) => cursorDefault && css`
@@ -25,11 +25,11 @@ export const Button = styled.button`
 
     &:hover,
     &:focus {
-        color: rgb(0, 160, 200);
+        color: ${({ theme }) => theme.unfilledButton.hoverColor};
     }
 
     &:disabled {
-        color: rgb(200, 200, 200);
+        color: ${({ theme }) => theme.unfilledButton.disabledColor};
     }
 
     @media (max-width: 768px) {

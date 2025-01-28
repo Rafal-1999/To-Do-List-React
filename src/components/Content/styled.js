@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const Block = styled.div`
-    background: rgb(255, 255, 255);
+    background: ${({ theme }) => theme.contentBlock.background};
     margin-bottom: 10px;
-    border: 2px solid rgb(227, 227, 227);
-    border-radius: 10px;
+    border: 2px solid ${({ theme }) => theme.contentBlock.border};
+    border-radius: ${({ theme }) => theme.borderRadius};
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 `;
 
 export const TopBox = styled.div`
@@ -12,7 +13,8 @@ export const TopBox = styled.div`
     display: flex;
     justify-content: space-between;
     row-gap: 20px;
-    border-bottom: 2px solid rgb(227, 227, 227);
+    border-bottom: 2px solid ${({ theme }) => theme.contentBlock.border};
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 
     ${({ vertical }) => vertical && css`
         @media (max-width: 768px) {
@@ -22,8 +24,10 @@ export const TopBox = styled.div`
 `;
 
 export const HeaderTwo = styled.h2`
+    color: ${({ theme }) => theme.h2.color};
     margin: 0;
     font-size: 25px;
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 
     @media (max-width: 576px) {
         font-size: 20px;

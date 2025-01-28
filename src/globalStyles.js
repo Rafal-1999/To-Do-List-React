@@ -14,7 +14,9 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        background: ${({ theme }) => theme.body.background};
         font-family: "Montserrat", sans-serif;
+        transition: background ${({ theme }) => theme.transitionDuration} linear;
     }
 `;
 

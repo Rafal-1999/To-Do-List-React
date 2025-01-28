@@ -3,12 +3,13 @@ import styled, { css } from "styled-components";
 export const FooterArea = styled.footer`
     margin-bottom: 10px;
     padding: 25px;
-    background: rgb(255, 255, 255);
-    border: 2px solid rgb(227, 227, 227);
-    border-radius: 10px;
+    background: ${({ theme }) => theme.footer.background};
+    border: 2px solid ${({ theme }) => theme.footer.border};
+    border-radius: ${({ theme }) => theme.borderRadius};
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 
     @media (min-width: 577px) {
         flex-direction: row;
@@ -31,10 +32,12 @@ export const FooterBox = styled.div`
 `;
 
 export const FooterContent = styled.p`
+    color: ${({ theme }) => theme.footer.color};
     margin: 0 0 5px 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.19;
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 
     &:last-of-type {
         margin-bottom: 0;
@@ -46,8 +49,12 @@ export const Awarded = styled.span`
 `;
 
 export const FooterLink = styled.a`
-    color: rgb(0, 0, 0);
-    background: linear-gradient(to right, #000, #000);
+    color: ${({ theme }) => theme.footer.color};
+    background: linear-gradient(
+        to right, 
+        ${({ theme }) => theme.footer.color}, 
+        ${({ theme }) => theme.footer.color}
+    );
     background-size: 0% 1px;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -58,7 +65,7 @@ export const FooterLink = styled.a`
     font-weight: 700;
     line-height: 1.19;
     text-decoration: none;
-    transition: background-size 0.3s linear;
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
     word-break: break-all;
 
     &:hover {

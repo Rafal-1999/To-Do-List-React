@@ -14,11 +14,12 @@ export const TasksItem = styled.li`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-bottom: 2px solid rgb(227, 227, 227);
+    border-bottom: 2px solid ${({ theme }) => theme.tasks.border};
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 
     &:hover,
     &:focus-within {
-        background: rgb(227, 227, 227);
+        background: ${({ theme }) => theme.tasks.background1};
     }
 
     &:last-child {
@@ -31,8 +32,9 @@ export const TasksItem = styled.li`
 `;
 
 export const ButtonIcon = styled.i`
-    color: rgb(255, 255, 255);
+    color: ${({ theme }) => theme.actionButtonIcon.color};
     font-size: 20px;
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 `;
 
 export const ActionButton = styled.button`
@@ -40,32 +42,32 @@ export const ActionButton = styled.button`
     height: 40px;
     border: 0;
     flex-shrink: 0;
-    transition: background 0.5s linear;
+    transition: background ${({ theme }) => theme.transitionDuration} linear;
     cursor: pointer;
 
     ${({ done }) => done && css`
-        background: rgb(24, 122, 30);
+        background: ${({ theme }) => theme.actionButton1.background};
 
         &:hover,
         &:focus {
-            background: rgb(30, 137, 35);
+            background: ${({ theme }) => theme.actionButton1.hoverBackground};
         }
 
         &:active {
-            background: rgb(35, 165, 40);
+            background: ${({ theme }) => theme.actionButton1.activeBackground};
         }
     `}
 
     ${({ remove }) => remove && css`
-        background: rgb(218, 22, 41);
+        background: ${({ theme }) => theme.actionButton2.background};
 
         &:hover,
         &:focus {
-            background: rgb(250, 60, 72);
+            background: ${({ theme }) => theme.actionButton2.hoverBackground};
         }
 
         &:active {
-            background: rgb(255, 85, 91);
+            background: ${({ theme }) => theme.actionButton2.activeBackground};
         }
     `}
 `;
@@ -85,7 +87,11 @@ export const TasksParagraph = styled.p`
 `;
 
 export const TasksContent = styled.span`
-    background: linear-gradient(0deg, #000, #000);
+    background: linear-gradient(
+        0deg, 
+        ${({ theme }) => theme.tasks.background2}, 
+        ${({ theme }) => theme.tasks.background2}
+    );
     background-size: 0% 1px;
     background-position: left center;
     background-repeat: no-repeat;
@@ -100,12 +106,12 @@ export const TasksContent = styled.span`
 `;
 
 export const TasksLink = styled(Link)`
-    color: rgb(0, 116, 131);
+    color: ${({ theme }) => theme.tasks.color};
     text-decoration: none;
-    transition: color 0.3s linear;
+    transition: color ${({ theme }) => theme.transitionDuration} linear;
 
     &:hover {
-        color: rgb(0, 160, 200);
+        color: ${({ theme }) => theme.tasks.hoverColor};
         text-decoration: underline;
     }
 `;
@@ -117,4 +123,6 @@ export const ReactTooltipStyled = styled(ReactTooltip)`
 
 export const TasksInfo = styled.p`
     margin: 0;
+    color: ${({ theme }) => theme.body.color};
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 `;

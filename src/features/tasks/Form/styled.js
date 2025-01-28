@@ -11,7 +11,11 @@ export const FormArea = styled.form`
 export const FormInput = styled.input`
     margin-right: 25px;
     padding: 10px;
+    color: ${({ theme }) => theme.formInput.color};
+    background: ${({ theme }) => theme.formInput.background};
+    border: 2px solid ${({ theme }) => theme.formInput.border};
     flex: 1;
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
 
     @media (max-width: 576px) {
         margin: 0 0 15px;
@@ -20,20 +24,20 @@ export const FormInput = styled.input`
 
 export const FormButton = styled.button`
     padding: 10px;
-    color: rgb(255, 255, 255);
-    background: rgb(0, 116, 131);
-    border: 3px solid rgb(30, 111, 125);
-    transition: all 0.5s linear;
+    color: ${({ theme }) => theme.filledButton.color};
+    background: ${({ theme }) => theme.filledButton.background};
+    border: 3px solid ${({ theme }) => theme.filledButton.border};
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
     cursor: pointer;
 
     &:hover,
     &:focus {
-        background: rgb(0, 141, 156);
-        border-color: rgb(30, 136, 150);
+        background: ${({ theme }) => theme.filledButton.hoverBackground};
+        border-color: ${({ theme }) => theme.filledButton.hoverBorder};
         transform: scale(1.1);
     }
 
     &:active {
-        background: rgb(0, 167, 182);
+        background: ${({ theme }) => theme.filledButton.activeBackground};
     }
 `;
