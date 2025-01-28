@@ -93,7 +93,8 @@ export const light = {
     },
     tasks: {
         color: colors.blueLagoon,
-        background: colors.mercury,
+        background1: colors.mercury,
+        background2: colors.black,
         border: colors.mercury,
         hoverColor: colors.blueStone
     },
@@ -167,7 +168,8 @@ export const dark = {
     },
     tasks: {
         color: colors.bondiBlue1,
-        background: colors.codGray2,
+        background1: colors.codGray2,
+        background2: colors.white,
         border: colors.codGray2,
         hoverColor: colors.cerulean
     },
