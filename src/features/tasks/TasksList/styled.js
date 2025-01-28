@@ -88,7 +88,7 @@ export const TasksParagraph = styled.p`
 
 export const TasksContent = styled.span`
     background: linear-gradient(
-        0deg, 
+        to right, 
         ${({ theme }) => theme.tasks.background2}, 
         ${({ theme }) => theme.tasks.background2}
     );

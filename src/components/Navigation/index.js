@@ -1,18 +1,18 @@
-import { StyledNavigation, NavigationItem, NavigationLink } from "./styled";
+import { StyledNavigation, NavigationLink } from "./styled";
 
 const Navigation = () => (
     <nav>
         <StyledNavigation>
-            <NavigationItem>
+            <li>
                 <NavigationLink $activeClassName="active" to="/zadania">
                     Zadania
                 </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
+            </li>
+            <li>
                 <NavigationLink $activeClassName="active" to="/autor">
                     O autorze
                 </NavigationLink>
-            </NavigationItem>
+            </li>
         </StyledNavigation>
     </nav>
 );

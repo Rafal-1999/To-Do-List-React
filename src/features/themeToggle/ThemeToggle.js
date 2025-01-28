@@ -7,6 +7,7 @@ const ThemeToggle = () => {
     return (
         <StyledThemeToggle
             currentTheme={theme}
+            type="button"
             aria-label={`Przełącz motyw na ${theme === "light" ? "ciemny" : "jasny"}`}
             onClick={() => toggleTheme()}
         />
