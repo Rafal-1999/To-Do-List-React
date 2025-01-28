@@ -3,15 +3,13 @@ import styled, { css } from "styled-components";
 export const StyledThemeToggle = styled.button`
     width: 60px;
     height: 30px;
-    background: rgb(218, 22, 41);
+    background: ${({ theme }) => theme.themeToggle.background1};
     display: block;
-    border: 0;
+    border: 2px solid ${({ theme }) => theme.themeToggle.border};
     border-radius: 50px;
-    box-shadow: rgba(20, 20, 20, 0.75) 0px 2px 5px 1px inset,
-    rgba(20, 20, 20, 0.75) 0px -2px 5px 1px inset;
     flex-shrink: 0;
     position: relative;
-    transition: all 0.3s linear;
+    transition: all ${({ theme }) => theme.transitionDuration} linear;
     z-index: 1;
     cursor: pointer;
 
@@ -19,7 +17,7 @@ export const StyledThemeToggle = styled.button`
         content: "";
         width: 20px;
         height: 20px;
-        background: rgb(255, 255, 255);
+        background: ${({ theme }) => theme.themeToggle.background2};
         margin: auto 0;
         border-radius: 50%;
         position: absolute;
@@ -30,10 +28,10 @@ export const StyledThemeToggle = styled.button`
     }
 
     &::after {
-        content: "\\e803";
+        content: "\\e804";
         width: 50%;
         height: 100%;
-        color: rgb(255, 255, 255);
+        color: ${({ theme }) => theme.themeToggle.color};
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -47,16 +45,13 @@ export const StyledThemeToggle = styled.button`
     }
 
     ${({ currentTheme }) => currentTheme === "dark" && css`
-        background: rgb(33, 166, 42);
-
         &::before {
             left: calc(100% - 5px);
             transform: translateX(-100%);
         }
 
         &::after {
-            content: "\\e801";
-            color: rgb(0, 0, 0);
+            content: "\\e805";
             right: 50%;
         }
     `}
