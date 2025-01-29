@@ -1,20 +1,30 @@
 {
   "files": {
-    "main.css": "/To-Do-List-React/static/css/main.2baf5590.css",
-    "main.js": "/To-Do-List-React/static/js/main.46c28679.js",
+    "main.css": "/To-Do-List-React/static/css/main.a7efee29.css",
+    "main.js": "/To-Do-List-React/static/js/main.b95df949.js",
     "static/js/787.d1b892bc.chunk.js": "/To-Do-List-React/static/js/787.d1b892bc.chunk.js",
-    "static/media/fontello.eot?29136888": "/To-Do-List-React/static/media/fontello.a40f5dabf78370268dd0.eot",
-    "static/media/fontello.ttf?29136888": "/To-Do-List-React/static/media/fontello.374c0d88585671093769.ttf",
-    "static/media/fontello.woff?29136888": "/To-Do-List-React/static/media/fontello.3a46ea2336537c650a6b.woff",
-    "static/media/fontello.woff2?29136888": "/To-Do-List-React/static/media/fontello.48419cf71f355b2e2e71.woff2",
-    "static/media/fontello.svg?29136888": "/To-Do-List-React/static/media/fontello.e6c3e0c27afee3039f7a.svg",
+    "static/media/Montserrat-Bold.svg": "/To-Do-List-React/static/media/Montserrat-Bold.d6bf4df814fbe9b47d71.svg",
+    "static/media/Montserrat-Regular.svg": "/To-Do-List-React/static/media/Montserrat-Regular.96e75bda376cad4aaaa2.svg",
+    "static/media/Montserrat-Bold.eot": "/To-Do-List-React/static/media/Montserrat-Bold.b113acfedb6d2054c107.eot",
+    "static/media/Montserrat-Bold.ttf": "/To-Do-List-React/static/media/Montserrat-Bold.a14d6655ea05542ba219.ttf",
+    "static/media/Montserrat-Regular.eot": "/To-Do-List-React/static/media/Montserrat-Regular.641705b8f423bbe0ed20.eot",
+    "static/media/Montserrat-Regular.ttf": "/To-Do-List-React/static/media/Montserrat-Regular.cd468102a4ed0ac2594f.ttf",
+    "static/media/Montserrat-Bold.woff": "/To-Do-List-React/static/media/Montserrat-Bold.c3152b4bca72e5fa0f1d.woff",
+    "static/media/Montserrat-Regular.woff": "/To-Do-List-React/static/media/Montserrat-Regular.28d1cd8f0d64ab4e8e27.woff",
+    "static/media/Montserrat-Bold.woff2": "/To-Do-List-React/static/media/Montserrat-Bold.c4adaa9afbc79b3fc25e.woff2",
+    "static/media/Montserrat-Regular.woff2": "/To-Do-List-React/static/media/Montserrat-Regular.b0463f53f41af9e523ee.woff2",
+    "static/media/fontello.eot?68112527": "/To-Do-List-React/static/media/fontello.e2e516f57d226b7dae90.eot",
+    "static/media/fontello.ttf?68112527": "/To-Do-List-React/static/media/fontello.3d2862c04033ab8fedfe.ttf",
+    "static/media/fontello.woff?68112527": "/To-Do-List-React/static/media/fontello.3bd308620d52b12634dc.woff",
+    "static/media/fontello.svg?68112527": "/To-Do-List-React/static/media/fontello.8f15e3e3a455f2dcab7e.svg",
+    "static/media/fontello.woff2?68112527": "/To-Do-List-React/static/media/fontello.fd6f23848fec7eb784d2.woff2",
     "index.html": "/To-Do-List-React/index.html",
-    "main.2baf5590.css.map": "/To-Do-List-React/static/css/main.2baf5590.css.map",
-    "main.46c28679.js.map": "/To-Do-List-React/static/js/main.46c28679.js.map",
+    "main.a7efee29.css.map": "/To-Do-List-React/static/css/main.a7efee29.css.map",
+    "main.b95df949.js.map": "/To-Do-List-React/static/js/main.b95df949.js.map",
     "787.d1b892bc.chunk.js.map": "/To-Do-List-React/static/js/787.d1b892bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2baf5590.css",
-    "static/js/main.46c28679.js"
+    "static/css/main.a7efee29.css",
+    "static/js/main.b95df949.js"
   ]
 }
