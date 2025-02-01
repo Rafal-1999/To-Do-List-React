@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
     HashRouter,
     Routes,
@@ -20,10 +21,12 @@ const App = () => {
         <HashRouter>
             <Navigation />
             <Container>
-                <Routes>
-                    {pagesRoutes}
-                    <Route path="/" element={<Navigate to="/zadania" />} />
-                </Routes>
+                <Suspense>
+                    <Routes>
+                        {pagesRoutes}
+                        <Route path="/" element={<Navigate to="/zadania" />} />
+                    </Routes>
+                </Suspense>
                 <Footer
                     creator="Rafał Chudy"
                     copyright="wszelkie prawa zastrzeżone"

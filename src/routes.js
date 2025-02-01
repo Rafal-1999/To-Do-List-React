@@ -1,7 +1,9 @@
-import Tasks from "./pages/Tasks";
-import Task from "./pages/Task";
-import Author from "./pages/Author";
-import NotFound from "./pages/NotFound";
+import { lazy } from "react";
+
+const Tasks = lazy(() => import("./pages/Tasks"));
+const Task = lazy(() => import("./pages/Task"));
+const Author = lazy(() => import("./pages/Author"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const routes = [
     {
