@@ -19,24 +19,24 @@ const App = () => {
 
     return (
         <HashRouter>
-            <Navigation />
-            <Container>
-                <Suspense>
+            <Suspense>
+                <Navigation />
+                <Container>
                     <Routes>
                         {pagesRoutes}
                         <Route path="/" element={<Navigate to="/zadania" />} />
                     </Routes>
-                </Suspense>
-                <Footer
-                    creator="Rafał Chudy"
-                    copyright="wszelkie prawa zastrzeżone"
-                    year={`2022 - ${currentYear}`}
-                    socialLink="https://github.com/Rafal-1999"
-                    socialName="GitHub"
-                    socialIcon="icon-github"
-                    email="rafalchu5@gmail.com"
-                />
-            </Container>
+                    <Footer
+                        creator="Rafał Chudy"
+                        copyright="wszelkie prawa zastrzeżone"
+                        year={`2022 - ${currentYear}`}
+                        socialLink="https://github.com/Rafal-1999"
+                        socialName="GitHub"
+                        socialIcon="icon-github"
+                        email="rafalchu5@gmail.com"
+                    />
+                </Container>
+            </Suspense>
         </HashRouter>
     )
 };
