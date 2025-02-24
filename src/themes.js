@@ -126,9 +126,9 @@ export const dark = {
         background: colors.bondiBlue1
     },
     themeToggle: {
-        color: colors.blueLagoon,
+        color: colors.bondiBlue1,
         background1: colors.black,
-        background2: colors.blueLagoon,
+        background2: colors.bondiBlue1,
         border: colors.codGray2
     },
     contentBlock: {
