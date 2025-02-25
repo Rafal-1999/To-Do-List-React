@@ -12,11 +12,11 @@ export const StyledHeader = styled.header`
 export const HeaderOne = styled.h1`
     color: ${({ theme }) => theme.h1.color};
     margin: 0;
-    font-size: 40px;
+    font-size: 28px;
     line-height: 1;
     transition: all ${({ theme }) => theme.transitionDuration} linear;
 
-    @media (max-width: 576px) {
-        font-size: 28px;
+    @media (min-width: 576px) {
+        font-size: 40px;
     }
 `;

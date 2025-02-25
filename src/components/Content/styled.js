@@ -26,12 +26,12 @@ export const TopBox = styled.div`
 export const HeaderTwo = styled.h2`
     color: ${({ theme }) => theme.h2.color};
     margin: 0;
-    font-size: 25px;
+    font-size: 20px;
     transition: all ${({ theme }) => theme.transitionDuration} linear;
+    word-break: break-word;
 
-    @media (max-width: 576px) {
-        font-size: 20px;
-        word-break: break-word;
+    @media (min-width: 576px) {
+        font-size: 25px;
     }
 `;
 
