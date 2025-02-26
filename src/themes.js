@@ -46,6 +46,9 @@ export const light = {
     h2: {
         color: colors.black
     },
+    h3: {
+        color: colors.black
+    },
     navigation: {
         color: colors.white,
         background: colors.blueLagoon
@@ -102,6 +105,10 @@ export const light = {
         color: colors.white,
         background: colors.blueLagoon
     },
+    unorderedList: {
+        color: colors.black,
+        background: colors.blueLagoon
+    },
     footer: {
         color: colors.black,
         background: colors.white,
@@ -119,6 +126,9 @@ export const dark = {
         color: colors.white
     },
     h2: {
+        color: colors.white
+    },
+    h3: {
         color: colors.white
     },
     navigation: {
@@ -175,6 +185,10 @@ export const dark = {
     },
     tooltip: {
         color: colors.black,
+        background: colors.bondiBlue1
+    },
+    unorderedList: {
+        color: colors.white,
         background: colors.bondiBlue1
     },
     footer: {
